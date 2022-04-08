@@ -24,9 +24,73 @@
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
                 <a class="navbar-brand" href="/.">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Expanded navigation -->
                 <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="/." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="/works/" class="nav-link">Works</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Engineering <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="/engineering/20220406-22%20core%20dumped/" class="dropdown-item">22 core dumped</a>
+</li>
+                                    
+<li>
+    <a href="/engineering/20220407-half/" class="dropdown-item">添加 Tensor.half</a>
+</li>
+                                    
+<li>
+    <a href="/engineering/20220408-23%20ninja%20build%20stopped/" class="dropdown-item">23 ninja: build stopped: subcommand failed</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Onecloud <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="/onecloud/20220322-Flask%20%E5%8A%A0%E8%BD%BD%E4%B8%8D%E5%87%BA%20js%20%E7%AD%89%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6/" class="dropdown-item">Flask 加载不出 js 等静态文件</a>
+</li>
+                                    
+<li>
+    <a href="/onecloud/20220322-%E4%BA%91%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" class="dropdown-item">20220322 云平台使用注意事项</a>
+</li>
+                                    
+<li>
+    <a href="/onecloud/20220408-%E5%AF%B9%E9%BD%90%E8%BF%87%E7%A8%8B%E7%BB%8F%E9%AA%8C%E6%B2%89%E6%B7%80/" class="dropdown-item">20220408 对齐过程经验沉淀</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Util <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="/util/20220307-mkdocs/" class="dropdown-item">设置GitHub为网页</a>
+</li>
+                                    
+<li>
+    <a href="/util/20220322-%E9%A1%B9%E7%9B%AE%E6%94%B6%E5%B7%A5%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="dropdown-item">项目收工小技巧</a>
+</li>
+                                    
+<li>
+    <a href="/util/20220406-ssh/" class="dropdown-item">20220406 ssh</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
 
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item">

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>23 ninja: build stopped: subcommand failed - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../works/" class="nav-link">Works</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Engineering <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../20220406-22%20core%20dumped/" class="dropdown-item">22 core dumped</a>
+</li>
+                                    
+<li>
+    <a href="../20220407-half/" class="dropdown-item">添加 Tensor.half</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">23 ninja: build stopped: subcommand failed</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Onecloud <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../onecloud/20220322-Flask%20%E5%8A%A0%E8%BD%BD%E4%B8%8D%E5%87%BA%20js%20%E7%AD%89%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6/" class="dropdown-item">Flask 加载不出 js 等静态文件</a>
+</li>
+                                    
+<li>
+    <a href="../../onecloud/20220322-%E4%BA%91%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" class="dropdown-item">20220322 云平台使用注意事项</a>
+</li>
+                                    
+<li>
+    <a href="../../onecloud/20220408-%E5%AF%B9%E9%BD%90%E8%BF%87%E7%A8%8B%E7%BB%8F%E9%AA%8C%E6%B2%89%E6%B7%80/" class="dropdown-item">20220408 对齐过程经验沉淀</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Util <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../util/20220307-mkdocs/" class="dropdown-item">设置GitHub为网页</a>
+</li>
+                                    
+<li>
+    <a href="../../util/20220322-%E9%A1%B9%E7%9B%AE%E6%94%B6%E5%B7%A5%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="dropdown-item">项目收工小技巧</a>
+</li>
+                                    
+<li>
+    <a href="../../util/20220406-ssh/" class="dropdown-item">20220406 ssh</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../20220407-half/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../onecloud/20220322-Flask%20%E5%8A%A0%E8%BD%BD%E4%B8%8D%E5%87%BA%20js%20%E7%AD%89%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#23-ninja-build-stopped-subcommand-failed" class="nav-link">23 ninja: build stopped: subcommand failed</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="23-ninja-build-stopped-subcommand-failed">23 ninja: build stopped: subcommand failed</h1>
+<p>debug log：</p>
+<ul>
+<li>更改 miniconda 为 anaconda，同样报错</li>
+<li>按照 https://github.com/Oneflow-Inc/conda-env 配置环境，同样报错</li>
+<li>重新 git clone git@github.com:Oneflow-Inc/oneflow.git，同样报错</li>
+<li>考虑到 cuda 依赖包等问题，安装 PyTorch，同样报错</li>
+<li>考虑到不管咋搞 black 版本报错都存在，因此新建一个干净的环境，更换python版本，同样报错</li>
+<li>将 click 从 8.1 版本更换成 8.0 版本，可以解决问题，参考  https://github.com/psf/black/issues/2964 </li>
+</ul>
+<p>报错如下</p>
+<pre><code>[226/1835] Performing build step for 'lz4'
+make[1]: Entering directory '/home/zhongshanshan/workspace/tmp/oneflow/build/lz4/src/lz4/lib'
+compiling static library
+make[1]: Leaving directory '/home/zhongshanshan/workspace/tmp/oneflow/build/lz4/src/lz4/lib'
+make[1]: Entering directory '/home/zhongshanshan/workspace/tmp/oneflow/build/lz4/src/lz4/lib'
+compiling dynamic library 1.9.2
+creating versioned links
+make[1]: Leaving directory '/home/zhongshanshan/workspace/tmp/oneflow/build/lz4/src/lz4/lib'
+[234/1835] cd /home/zhongshanshan/workspace/tmp/oneflow/...workspace/tmp/oneflow/tools/oneflow-tblgen --fix --quiet
+FAILED: CMakeFiles/of_format /home/zhongshanshan/workspace/tmp/oneflow/build/CMakeFiles/of_format 
+cd /home/zhongshanshan/workspace/tmp/oneflow/build &amp;&amp; /home/zhongshanshan/anaconda3/envs/py38/bin/python3 /home/zhongshanshan/workspace/tmp/oneflow/ci/check/run_license_format.py -i /home/zhongshanshan/workspace/tmp/oneflow/oneflow --fix &amp;&amp; /home/zhongshanshan/anaconda3/envs/py38/bin/python3 /home/zhongshanshan/workspace/tmp/oneflow/ci/check/run_license_format.py -i /home/zhongshanshan/workspace/tmp/oneflow/python --fix --exclude=&quot;oneflow/include&quot; --exclude=&quot;oneflow/core&quot; &amp;&amp; /home/zhongshanshan/anaconda3/envs/py38/bin/python3 /home/zhongshanshan/workspace/tmp/oneflow/ci/check/run_clang_format.py --source_dir /home/zhongshanshan/workspace/tmp/oneflow/oneflow --fix --quiet &amp;&amp; /home/zhongshanshan/anaconda3/envs/py38/bin/python3 /home/zhongshanshan/workspace/tmp/oneflow/ci/check/run_py_format.py --source_dir /home/zhongshanshan/workspace/tmp/oneflow/python --fix &amp;&amp; /home/zhongshanshan/anaconda3/envs/py38/bin/python3 /home/zhongshanshan/workspace/tmp/oneflow/ci/check/run_clang_format.py --source_dir /home/zhongshanshan/workspace/tmp/oneflow/tools/oneflow-tblgen --fix --quiet
+[files] 2473
+[files] 730
+clang-format version 10.0.0-4ubuntu1 
+
+clang-format version 11.0.0
+
+2458 files checked
+Traceback (most recent call last):
+  File &quot;/home/zhongshanshan/anaconda3/envs/py38/lib/python3.8/runpy.py&quot;, line 192, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File &quot;/home/zhongshanshan/anaconda3/envs/py38/lib/python3.8/runpy.py&quot;, line 85, in _run_code
+    exec(code, run_globals)
+  File &quot;/home/zhongshanshan/.local/lib/python3.8/site-packages/black.py&quot;, line 4139, in &lt;module&gt;
+    patched_main()
+  File &quot;/home/zhongshanshan/.local/lib/python3.8/site-packages/black.py&quot;, line 4134, in patched_main
+    patch_click()
+  File &quot;/home/zhongshanshan/.local/lib/python3.8/site-packages/black.py&quot;, line 4123, in patch_click
+    from click import _unicodefun  # type: ignore
+ImportError: cannot import name '_unicodefun' from 'click' (/home/zhongshanshan/.local/lib/python3.8/site-packages/click/__init__.py)
+Please install black 19.10b0. For instance, run 'python3 -m pip install black==19.10b0 --user'
+[295/1835] Performing configure step for 'opencv'
+loading initial cache file /home/zhongshanshan/workspace/tmp/oneflow/build/opencv/tmp/opencv-cache-Release.cmake
+-- The CXX compiler identification is GNU 9.4.0
+</code></pre>
+<p>最终的报错</p>
+<pre><code>a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Compiling  broadcast.cu                        &gt; /home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/build/obj/collectives/device/broadcast_sumpostdiv_u64.o
+nvcc warning : The 'compute_35', 'compute_37', 'compute_50', 'sm_35', 'sm_37' and 'sm_50' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Compiling  broadcast.cu                        &gt; /home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/build/obj/collectives/device/broadcast_sumpostdiv_f16.o
+nvcc warning : The 'compute_35', 'compute_37', 'compute_50', 'sm_35', 'sm_37' and 'sm_50' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Compiling  broadcast.cu                        &gt; /home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/build/obj/collectives/device/broadcast_sumpostdiv_f32.o
+nvcc warning : The 'compute_35', 'compute_37', 'compute_50', 'sm_35', 'sm_37' and 'sm_50' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Compiling  broadcast.cu                        &gt; /home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/build/obj/collectives/device/broadcast_sumpostdiv_f64.o
+nvcc warning : The 'compute_35', 'compute_37', 'compute_50', 'sm_35', 'sm_37' and 'sm_50' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Compiling  broadcast.cu                        &gt; /home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/build/obj/collectives/device/broadcast_sumpostdiv_bf16.o
+nvcc warning : The 'compute_35', 'compute_37', 'compute_50', 'sm_35', 'sm_37' and 'sm_50' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc warning : The 'compute_35', 'compute_37', 'compute_50', 'sm_35', 'sm_37' and 'sm_50' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Archiving  objects                             &gt; /home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/build/obj/collectives/device/colldevice.a
+make[2]: Leaving directory '/home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/src/collectives/device'
+Linking    libnccl.so.2.11.4                   &gt; /home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/build/lib/libnccl.so.2.11.4
+Archiving  libnccl_static.a                    &gt; /home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/build/lib/libnccl_static.a
+/home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/src
+make[1]: Leaving directory '/home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/src'
+ninja: build stopped: subcommand failed.
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
