@@ -1,0 +1,789 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.1.11">
+    
+    
+      
+        <title>Flask 加载不出 js 等静态文件 - Shanshan's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3754935a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#flask-js" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="Shanshan&#39;s Blog" class="md-header__button md-logo" aria-label="Shanshan's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Shanshan's Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Flask 加载不出 js 等静态文件
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../index.html" class="md-tabs__link">
+      首页
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../util/20220307-mkdocs.html" class="md-tabs__link">
+        常用工具
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../engineering/20220406-22%20core%20dumped.html" class="md-tabs__link">
+        框架组
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="20220408-%E5%AF%B9%E9%BD%90%E8%BF%87%E7%A8%8B%E7%BB%8F%E9%AA%8C%E6%B2%89%E6%B7%80.html" class="md-tabs__link md-tabs__link--active">
+        云平台
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../works.html" class="md-tabs__link">
+      PR
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Shanshan&#39;s Blog" class="md-nav__button md-logo" aria-label="Shanshan's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    Shanshan's Blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        首页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        常用工具
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="常用工具" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          常用工具
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../util/20220307-mkdocs.html" class="md-nav__link">
+        mkdocs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../util/20220322-%E9%A1%B9%E7%9B%AE%E6%94%B6%E5%B7%A5%E5%B0%8F%E6%8A%80%E5%B7%A7.html" class="md-nav__link">
+        项目收工小技巧
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../util/20220406-ssh.html" class="md-nav__link">
+        ssh
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        框架组
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="框架组" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          框架组
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engineering/20220406-22%20core%20dumped.html" class="md-nav__link">
+        22 core dumped
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engineering/20220407-half.html" class="md-nav__link">
+        half
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engineering/20220408-23%20ninja%20build%20stopped.html" class="md-nav__link">
+        23 ninja build stopped
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        云平台
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="云平台" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          云平台
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="20220408-%E5%AF%B9%E9%BD%90%E8%BF%87%E7%A8%8B%E7%BB%8F%E9%AA%8C%E6%B2%89%E6%B7%80.html" class="md-nav__link">
+        对齐过程经验沉淀
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="20220322-%E4%BA%91%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.html" class="md-nav__link">
+        云平台使用注意事项
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Flask 加载不出 js 等静态文件
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="20220322-Flask%20%E5%8A%A0%E8%BD%BD%E4%B8%8D%E5%87%BA%20js%20%E7%AD%89%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6.html" class="md-nav__link md-nav__link--active">
+        Flask 加载不出 js 等静态文件
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 测试
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1 问题描述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 解决方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 部署
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../works.html" class="md-nav__link">
+        PR
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 测试
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    1.1 问题描述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    1.2 解决方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 部署
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="flask-js">Flask 加载不出 js 等静态文件</h1>
+<p>这个问题一共出现了两次：</p>
+<ul>
+<li>测试：在云平台服务器上的 <code>localhost</code> 端口测试的时候</li>
+<li>部署：部署到云平台上的 API 的时候</li>
+</ul>
+<h2 id="1">1. 测试</h2>
+<h3 id="11">1.1 问题描述</h3>
+<p>当前文件夹目录如下：</p>
+<pre><code>.
+|-- templates
+    |-- index.css
+    `-- index.html
+`-- server.py
+</code></pre>
+<p>运行 <code>server.py</code> 这个文件，使用 Flask 的 <code>render_template("index.html", base_dir=base_dir)</code> 将 <code>index.html</code> 加载出来，会发现在 <code>index.html</code> 中引用的 <code>&lt;link rel="stylesheet" type='text/css' href="{{base_dir}}/index.css"&gt;</code>  加载不出来，即报 404 错误，找不到文件，如下所示：</p>
+<pre><code>127.0.0.1 - - [17/Mar/2022 09:34:53] &quot;GET /index.css HTTP/1.1&quot; 404 -
+</code></pre>
+<p>但是使用浏览器直接打开 <code>index.html</code> 是正常的。这是因为当我们直接使用浏览器打开 <code>index.html</code> 时，并没有服务端和客户端，浏览器作为一个工具会根据本地文件中的“相对链接”在文件系统中进行搜索。而当使用 Flask 启动项目之后，程序是一个 Browser/Server 的架构。用户访问某个页面，并不是直接拿到所有的信息，而是通过若干次发包和得到回复包，再将结果渲染到本地浏览器上。以本次报错为例，浏览器通过地址请求到 <code>index.html</code>，随后通过解析 <code>index.html</code>，发现缺少 <code>index.css</code> 文件，浏览器继续发送请求，获取 <code>index.css</code> 文件，此时浏览器的请求路径从 <code>index.html</code> 中获得，所以如果  <code>index.html</code> 中写的是相对路径，即 <code>&lt;link rel="stylesheet" type='text/css' href="{{base_dir}}/index.css"&gt;</code>，那么浏览器将会在服务器的 home 目录下找 <code>index.css</code> 文件，显然是找不到的，因为相对于 home 目录，此时 <code>index.css</code> 的路径是 <code>/templates/index.css</code> 而不是 <code>/index.css</code>。</p>
+<h3 id="12">1.2 解决方法</h3>
+<p>暴力的解决方法是将 <code>&lt;link rel="stylesheet" type='text/css' href="{{base_dir}}/index.css"&gt;</code> 修改成  <code>&lt;link rel="stylesheet" type='text/css' href="{{base_dir}}/templates/index.css"&gt;</code>，但是考虑到文件夹的有序性，更推荐如下做法。</p>
+<p>创建静态文件夹 <code>static</code>，将 <code>index.css</code> 移到 static 下，即</p>
+<pre><code>.
+|-- static
+    `-- index.css
+|-- templates
+    `-- index.html
+`-- server.py
+</code></pre>
+<p>并将 <code>&lt;link rel="stylesheet" type='text/css' href="{{base_dir}}/index.css"&gt;</code>  替换成  <code>&lt;link rel="stylesheet" type='text/css' href="{{base_dir}}/static/index.css"&gt;</code> 。</p>
+<blockquote>
+<p>更多：关于 Flask 默认静态文件夹，可参考 <a href="https://dormousehole.readthedocs.io/en/latest/quickstart.html#id9">Flask 中文文档 (2.0.2) </a>。</p>
+</blockquote>
+<h2 id="2">2. 部署</h2>
+<p>当将项目部署到云平台时，即 Fork 项目之后部署在线推理，运行部署好的项目，我们会获得到一个外网可以访问的 API 地址，以实现快速部署和访问我们在云服务器上测试的模型。这个 API 地址默认格式为 <code>https://gateway.platform.oneflow.cloud/serving/{id}/v1/index</code>。</p>
+<p>首先注意到 <code>serving/{id}/</code> 这部分，可以称之为 <strong>哈希值</strong>，它的存在是因为云平台部署的路由分两层：</p>
+<ul>
+<li>用户请求发送到 flow 的第一层网关，第一层网关通过分析 url 的哈希值来确定项目来源，也即提供服务的服务器；</li>
+<li>确定项目来源之后，根据其后的后缀 <code>v1/index</code> 到服务器上请求对应的服务</li>
+</ul>
+<p>哈希值的存在带来两个问题：</p>
+<ul>
+<li>问题一：该 API 地址到服务器上请求服务时，<code>@app.route</code> 是 <code>serving/{id}/v1/index</code>；</li>
+<li>问题二：请求静态文件时，相对于具体服务器而言，<code>Flask(__name__)</code> 默认静态文件夹目录为 <code>/static</code>，当请求 <code>/static/index.css</code> 时应当发送 <code>/static/index.css</code>，但是云平台发送静态文件请求时的 url 为 <code>/serving/{id}/static/index.css</code></li>
+</ul>
+<p>可以通过环境变量 <code>BASE_DIR</code> 的形式把哈希前缀传到服务端代码以解决上述问题。代码示例：</p>
+<pre><code class="language-python">import os
+from flask import Flask, render_template
+
+base_dir = os.environ.get(&quot;BASE_DIR&quot;, &quot;&quot;)
+app = Flask(__name__, static_url_path=base_dir+'/static')   # 解决问题二
+
+@app.route(f&quot;{base_dir}/v1/index&quot;, methods=[&quot;GET&quot;])         # 解决问题一
+def home():
+    return render_template(&quot;index.html&quot;, base_dir=base_dir) # 解决问题二   
+
+if __name__ == &quot;__main__&quot;:
+    app.run(&quot;0.0.0.0&quot;)
+
+</code></pre>
+<p>如上代码所示，我们增加了参数 <code>base_dir</code>，Flask 将 <code>base_dir</code> 传到 <code>@app.route</code>、<code>static_url_path</code>、 <strong>html 文件</strong>中。这个参数的定义为：</p>
+<ul>
+<li>当存在 <code>BASE_DIR</code>时，即在云服务器上部署时，获取到 <code>BASE_DIR</code> 即上文所说的 <code>serving/{id}/</code> </li>
+<li>否则 <code>base_dir</code> 设置为空</li>
+</ul>
+<p><code>base_dir</code> 在 html 文件的使用示例如下：</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; type='text/css' href=&quot;{{base_dir}}/static/css/index.css&quot;&gt;
+</code></pre>
+<p>此处我们会发现，针对问题二，我们不仅将 <code>static_url_path</code> 值更改了，还将 html 中的请求路径（如 <code>href</code>）更改了，那不同时更改这两个路径不也能对应上静态文件吗？其实是不可以的。因为我们需要通过哈希值定位提供服务的服务器，即实现第一层网关，所以哈希值是必须存在的，<code>href</code> 必须带上哈希前缀才能实现第一层网关，而正是由于 <code>href</code> 带有哈希前缀，因此需要更改 <code>static_url_path</code>。</p>
+<p>最后，注意这个 API 默认格式为 <code>https://gateway.platform.oneflow.cloud/serving/{id}/v1/index</code>，这意味着在 Flask 模块，我们需要将我们想被访问到的页面设置为 <code>@app.route(f"{base_dir}/v1/index", ……)</code>，否则可能会对用户产生困扰。当然，也可以自定义 url。例如如果你添加了页面 A 到 <code>@app.route(f"{base_dir}/", ……)</code>，直接访问 <code>https://gateway.platform.oneflow.cloud/serving/{id}</code> 可以得到页面 A。</p>
+<blockquote>
+<p>更多：关于 <code>static_url_path</code>，可参考 <a href="https://blog.csdn.net/qq_40952927/article/details/81157204">Flask 创建app 时候传入的 static_folder 和 static_url_path参数理解</a></p>
+</blockquote>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="20220322-%E4%BA%91%E5%B9%B3%E5%8F%B0%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: 云平台使用注意事项" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              云平台使用注意事项
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../works.html" class="md-footer__link md-footer__link--next" aria-label="下一页: PR" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              PR
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+      
+    
+  </body>
+</html>
