@@ -1,1 +1,53 @@
-site_name: My Docs
+
+site_name: Shanshan's Blog
+#website/xxx.html style
+use_directory_urls: false
+
+# Configuration
+theme:
+  name: material
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.top
+    #- instant
+  palette:
+    scheme: default
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    logo: logo
+  favicon: assets/favicon.png
+
+nav:
+    - 首页: index.md
+
+    - 常用工具:
+      - mkdocs: util/20220307-mkdocs.md
+      - 项目收工小技巧: util/20220322-项目收工小技巧.md
+      - ssh: util/20220406-ssh.md
+
+    - 框架组:
+      - 22 core dumped: engineering/20220406-22 core dumped.md
+      - half: engineering/20220407-half.md
+      - 23 ninja build stopped: engineering/20220408-23 ninja build stopped.md
+
+    - 云平台:
+      - 对齐过程经验沉淀: onecloud/20220408-对齐过程经验沉淀.md
+      - 云平台使用注意事项: onecloud/20220322-云平台使用注意事项.md
+      - Flask 加载不出 js 等静态文件: onecloud/20220322-Flask 加载不出 js 等静态文件.md
+
+    - PR: works.md
