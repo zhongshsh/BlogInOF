@@ -44,8 +44,8 @@ nav:
       - 技巧总结: engineering/技巧总结.md
       - 22 core dumped: engineering/20220406-22 core dumped.md
       - 23 ninja build stopped: engineering/20220408-23 ninja build stopped.md
-      - half: engineering/20220407-添加half.md
-      - half: engineering/20220408-添加deconv.md
+      - 添加half: engineering/20220407-添加half.md
+      - 添加deconv: engineering/20220408-添加deconv.md
 
     - 云平台:
       - 对齐过程经验沉淀: onecloud/20220408-对齐过程经验沉淀.md
