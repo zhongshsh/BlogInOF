@@ -14,7 +14,7 @@
     
     
       
-        <title>利用 mkdocs + GitHub 搭建文档网站 - Shanshan's Blog</title>
+        <title>关于 PR CI - Shanshan's Blog</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mkdocs-github" class="md-skip">
+        <a href="#pr-ci" class="md-skip">
           跳转至
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              利用 mkdocs + GitHub 搭建文档网站
+              关于 PR CI
             
           </span>
         </div>
@@ -306,58 +306,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          利用 mkdocs + GitHub 搭建文档网站
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="20220307-mkdocs.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="20220307-mkdocs.html" class="md-nav__link">
         利用 mkdocs + GitHub 搭建文档网站
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    流程
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#github-action-mkdocs" class="md-nav__link">
-    利用 GitHub Action 完成自动化 mkdocs 编译
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -389,11 +342,58 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="20220411-CI.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          关于 PR CI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="20220411-CI.html" class="md-nav__link md-nav__link--active">
         关于 PR CI
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    流程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    注意事项
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -608,8 +608,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#github-action-mkdocs" class="md-nav__link">
-    利用 GitHub Action 完成自动化 mkdocs 编译
+  <a href="#_2" class="md-nav__link">
+    注意事项
   </a>
   
 </li>
@@ -627,94 +627,23 @@
               
                 
                 
-                <h1 id="mkdocs-github">利用 mkdocs + GitHub 搭建文档网站</h1>
+                <h1 id="pr-ci">关于 PR CI</h1>
 <h2 id="_1">流程</h2>
+<p>获取两个 approve；</p>
+<p>在 reviewer 中添加 bot：</p>
+<p><img alt="1649669703474" src="https://user-images.githubusercontent.com/62104945/162732565-13e8dc71-bcdd-4d7c-a9b8-4d818e589c55.png" /></p>
+<p>根据 bot 的提示添加 label：</p>
+<p><img alt="1649669272258" src="https://user-images.githubusercontent.com/62104945/162732537-c6e310b9-2efe-40e2-9cdc-9afb1487a8ec.png" /></p>
+<p><img alt="1649669895451" src="https://user-images.githubusercontent.com/62104945/162732586-bb6fd337-b993-436a-9967-71bd4e9a72f7.png" /></p>
+<p>等待 CI 结束……</p>
+<h2 id="_2">注意事项</h2>
+<p><img alt="1649670072655" src="https://user-images.githubusercontent.com/62104945/162732477-29ab079e-58c6-4663-b093-928fd6b22cb8.png" /></p>
 <ul>
-<li>安装 Python 依赖包</li>
+<li>如果是 bot 来 format 代码，那么需要重新添加 bot 之后才会继续跑 CI 流程</li>
+<li>有时候会卡在某些错误，需要根据错误提示修改代码</li>
+<li>waiting queue</li>
 </ul>
-<pre><code>mkdocs==1.2.2
-mkdocs-material==7.1.11
-mkdocs-material-extensions==1.0.1
-mike==1.0.1
-</code></pre>
-<ul>
-<li>新建本地项目 myblog</li>
-</ul>
-<pre><code class="language-shell">mkdocs new myblog
-</code></pre>
-<ul>
-<li>
-<p>新建GitHub项目 myblog 并 clone 到本地</p>
-</li>
-<li>
-<p>在 clone 下来的 myblog 中移入本地文件夹 myblog 的内容，并 push 到远程仓库</p>
-</li>
-<li>
-<p>新建 gh-pages 分支</p>
-</li>
-</ul>
-<pre><code>git checkout -b gh-pages
-</code></pre>
-<ul>
-<li>在 GitHub 项目文件夹下编译文件</li>
-</ul>
-<pre><code class="language-shell">mkdocs build
-</code></pre>
-<ul>
-<li>删除除site之外的文件并将site文件夹的文件更新到root中</li>
-<li>将项目文件夹更新到 gh-pages 分支，此时查看 GitHub myblog 项目的 setting Pages 即可以看到对应网页地址</li>
-</ul>
-<h2 id="github-action-mkdocs">利用 GitHub Action 完成自动化 mkdocs 编译</h2>
-<ul>
-<li>点击 GitHub myblog 的 Action，新建一个 simple workflow</li>
-</ul>
-<p><img alt="image" src="https://user-images.githubusercontent.com/62104945/162753634-b6c86616-3595-4b62-ae54-bf3ac08f4857.png" /></p>
-<ul>
-<li>修改 yaml 文件</li>
-</ul>
-<pre><code class="language-yaml"># This is a basic workflow to help you get started with Actions
-
-name: public site
-
-# Controls when the workflow will run
-on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called &quot;build&quot;
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      - name: Install mkdocs
-        run: |
-          python -m pip install mkdocs==1.2.2
-          python -m pip install mkdocs-material==7.1.11
-          python -m pip install mkdocs-material-extensions==1.0.1
-          python -m pip install mike==1.0.1
-
-      - name: Create html
-        run: mkdocs build
-
-      - name: Public
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
-</code></pre>
+<p><img alt="image" src="https://user-images.githubusercontent.com/62104945/162755373-dd603f6b-63e6-490f-9f1f-3d1cd8575ae7.png" /></p>
                 
               
               
@@ -739,7 +668,7 @@ jobs:
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../index.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: 首页" rel="prev">
+        <a href="20220406-ssh.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: 使用 SSH 方式加速下载 GitHub 项目" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -748,20 +677,20 @@ jobs:
               <span class="md-footer__direction">
                 上一页
               </span>
-              首页
+              使用 SSH 方式加速下载 GitHub 项目
             </div>
           </div>
         </a>
       
       
         
-        <a href="20220322-%E9%A1%B9%E7%9B%AE%E6%94%B6%E5%B7%A5%E5%B0%8F%E6%8A%80%E5%B7%A7.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 项目收工小技巧" rel="next">
+        <a href="../engineering/%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 技巧总结" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              项目收工小技巧
+              技巧总结
             </div>
           </div>
           <div class="md-footer__button md-icon">
