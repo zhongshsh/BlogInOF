@@ -9,7 +9,7 @@
       
       
       
-      <link rel="icon" href="../assets/favicon.png">
+      <link rel="icon" href="../static/avatar.jpg">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.1.11">
     
     
@@ -63,6 +63,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#ssh-github" class="md-skip">
+          跳转至
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -186,7 +191,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../engineering/20220406-22%20core%20dumped.html" class="md-tabs__link">
+      <a href="../engineering/%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93.html" class="md-tabs__link">
         框架组
       </a>
     </li>
@@ -333,10 +338,49 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ssh
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="20220406-ssh.html" class="md-nav__link md-nav__link--active">
         ssh
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-keys" class="md-nav__link">
+    新增 ssh keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    使用
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -377,6 +421,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../engineering/%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93.html" class="md-nav__link">
+        技巧总结
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../engineering/20220406-22%20core%20dumped.html" class="md-nav__link">
         22 core dumped
       </a>
@@ -389,7 +445,19 @@
   
   
     <li class="md-nav__item">
-      <a href="../engineering/20220407-half.html" class="md-nav__link">
+      <a href="../engineering/20220408-23%20ninja%20build%20stopped.html" class="md-nav__link">
+        23 ninja build stopped
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engineering/20220407-%E6%B7%BB%E5%8A%A0half.html" class="md-nav__link">
         half
       </a>
     </li>
@@ -401,8 +469,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../engineering/20220408-23%20ninja%20build%20stopped.html" class="md-nav__link">
-        23 ninja build stopped
+      <a href="../engineering/20220408-%E6%B7%BB%E5%8A%A0deconv.html" class="md-nav__link">
+        half
       </a>
     </li>
   
@@ -502,17 +570,63 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ssh-keys" class="md-nav__link">
+    新增 ssh keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    使用
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>ssh</h1>
-                
-                <pre><code class="language-shell">ssh-keygen -t rsa  # 或者使用 ssh-keygen -t dsa
+                <h1 id="ssh-github">使用 SSH 方式下载 GitHub 项目</h1>
+<p>使用 SSH 方式下载 GitHub 项目速度相对更稳定（为啥？）</p>
+<h2 id="ssh-keys">新增 ssh keys</h2>
+<p>在服务器上运行如下指令，生成密钥（一路回车即可）</p>
+<pre><code class="language-shell">ssh-keygen -t rsa  # 或者使用 ssh-keygen -t dsa
 </code></pre>
-<p>将 <code>/home/.ssh/*.pub</code> 文件内容黏贴到 GitHub setting 的 <code>SSH AND GPG keys</code> </p>
+<p>将 <code>/home/.ssh/*.pub</code> 文件内容黏贴到 GitHub setting 的 <code>SSH AND GPG keys</code> （<a href="https://github.com/settings/ssh/new">Add new SSH keys</a> ），此时就可以在服务器上使用 SSH 下载 GitHub 项目了。</p>
+<h2 id="_1">使用</h2>
+<p>以 <a href="https://github.com/Oneflow-Inc/oneflow">OneFlow</a> 为例，使用 SSH 方式进行项目克隆。</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/62104945/162671080-a16aac76-cde7-43ca-bc61-98abd60c4275.png" /></p>
+<pre><code class="language-shell">git clone git@github.com:Oneflow-Inc/oneflow.git
+</code></pre>
                 
               
               
@@ -553,13 +667,13 @@
       
       
         
-        <a href="../engineering/20220406-22%20core%20dumped.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 22 core dumped" rel="next">
+        <a href="../engineering/%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 技巧总结" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              22 core dumped
+              技巧总结
             </div>
           </div>
           <div class="md-footer__button md-icon">
