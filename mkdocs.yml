@@ -1,6 +1,5 @@
 
 site_name: Shanshan's Blog
-#website/xxx.html style
 use_directory_urls: false
 
 # Configuration
@@ -20,7 +19,7 @@ theme:
   features:
     - navigation.tabs
     - navigation.top
-    #- instant
+    - instant
   palette:
     scheme: default
     primary: indigo
@@ -32,13 +31,15 @@ theme:
     logo: logo
   favicon: static/avatar.jpg
 
+
 nav:
     - 首页: index.md
 
     - 常用工具:
-      - mkdocs: util/20220307-mkdocs.md
+      - 利用 mkdocs + GitHub 搭建文档网站: util/20220307-mkdocs.md
       - 项目收工小技巧: util/20220322-项目收工小技巧.md
-      - ssh: util/20220406-ssh.md
+      - 使用 SSH 方式加速下载 GitHub 项目: util/20220406-ssh.md
+      - 关于 PR CI: util/20220411-CI.md
 
     - 框架组:
       - 技巧总结: engineering/技巧总结.md
