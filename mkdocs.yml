@@ -48,6 +48,7 @@ nav:
       - 23 ninja build stopped: engineering/20220408-23 ninja build stopped.md
       - 添加half: engineering/20220407-添加half.md
       - 添加deconv: engineering/20220408-添加deconv.md
+      - AutoTest: engineering/20220411-autotest.md
 
     - 云平台:
       - 对齐过程经验沉淀: onecloud/20220408-对齐过程经验沉淀.md
