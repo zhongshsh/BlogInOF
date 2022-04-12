@@ -14,7 +14,7 @@
     
     
       
-        <title>关于 PR CI - Shanshan's Blog</title>
+        <title>git 常用指令 - Shanshan's Blog</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pr-ci" class="md-skip">
+        <a href="#git" class="md-skip">
           跳转至
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              关于 PR CI
+              git 常用指令
             
           </span>
         </div>
@@ -342,18 +342,6 @@
             
   
   
-  
-    <li class="md-nav__item">
-      <a href="20220312-git.html" class="md-nav__link">
-        git 常用指令
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
     
   
   
@@ -366,12 +354,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          关于 PR CI
+          git 常用指令
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="20220411-CI.html" class="md-nav__link md-nav__link--active">
-        关于 PR CI
+      <a href="20220312-git.html" class="md-nav__link md-nav__link--active">
+        git 常用指令
       </a>
       
         
@@ -389,14 +377,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#pr" class="md-nav__link">
+    提交PR
+  </a>
+  
+    <nav class="md-nav" aria-label="提交PR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    流程
+    新建项目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    直接新建分支
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    常用指令
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#github" class="md-nav__link">
+    服务器登录GitHub并推送代码到自己账户下
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-commit" class="md-nav__link">
+    撤销 add 和 commit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     注意事项
   </a>
   
@@ -406,6 +435,18 @@
   
 </nav>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="20220411-CI.html" class="md-nav__link">
+        关于 PR CI
+      </a>
     </li>
   
 
@@ -613,14 +654,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#pr" class="md-nav__link">
+    提交PR
+  </a>
+  
+    <nav class="md-nav" aria-label="提交PR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    流程
+    新建项目
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    直接新建分支
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    常用指令
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#github" class="md-nav__link">
+    服务器登录GitHub并推送代码到自己账户下
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-commit" class="md-nav__link">
+    撤销 add 和 commit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     注意事项
   </a>
   
@@ -639,37 +721,101 @@
               
                 
                 
-                <h1 id="pr-ci">关于 PR CI</h1>
-<h2 id="_1">流程</h2>
+                <h1 id="git">git 常用指令</h1>
+<h2 id="pr">提交PR</h2>
+<p>一共有两种方法：</p>
+<ul>
+<li>新建项目：Fork</li>
+<li>新建分支：checkout -b</li>
+</ul>
+<p>使用 <code>新建项目</code> 这个方法可以在自己项目下进行代码对比和多次改动，权限和自由度较大，但是流程相对繁琐；使用 <code>新建分支</code> 这个方法相对直接。</p>
+<h3 id="_1">新建项目</h3>
 <ul>
 <li>
-<p>获取两个 approve；</p>
+<p>Fork 仓库</p>
 </li>
 <li>
-<p>在 reviewer 中添加 bot：</p>
+<p>拉取 Fork 到自己账户下的代码到本地：git clone</p>
+</li>
+<li>
+<p>创建新分支</p>
 </li>
 </ul>
-<p><img alt="1649669703474" src="https://user-images.githubusercontent.com/62104945/162732565-13e8dc71-bcdd-4d7c-a9b8-4d818e589c55.png" /></p>
+<pre><code class="language-shell">git init
+git pull
+git checkout master
+git checkout -b brach_name # 创建分支
+</code></pre>
 <ul>
-<li>根据 bot 的提示添加 label：</li>
+<li>修改文件，提交修改到远程仓库</li>
 </ul>
-<p><img alt="1649669272258" src="https://user-images.githubusercontent.com/62104945/162732537-c6e310b9-2efe-40e2-9cdc-9afb1487a8ec.png" /></p>
-<p><img alt="1649669895451" src="https://user-images.githubusercontent.com/62104945/162732586-bb6fd337-b993-436a-9967-71bd4e9a72f7.png" /></p>
+<pre><code class="language-shell">git add .
+git commit -m &quot;comment&quot; # 或者 git commit -a
+git push git_name brach_name
+</code></pre>
 <ul>
-<li>等待 CI 结束……</li>
+<li>复制指令中的链接到浏览器打开，进入一个PR创建页面（也可以在项目下的pull requests中找到这个页面）修改好命名和描述之后就可以提交到公开项目下</li>
 </ul>
-<h2 id="_2">注意事项</h2>
-<p><img alt="1649670072655" src="https://user-images.githubusercontent.com/62104945/162732477-29ab079e-58c6-4663-b093-928fd6b22cb8.png" /></p>
+<h3 id="_2">直接新建分支</h3>
 <ul>
-<li>如果是 bot 来 format 代码，那么需要重新添加 bot 之后才会继续跑 CI 流程</li>
-<li>有时候会卡在某些错误，需要根据错误提示修改代码</li>
-<li>waiting queue，等待其执行结束即可</li>
+<li>
+<p>拉取公开项目的代码到本地：git clone</p>
+</li>
+<li>
+<p>创建新分支</p>
+</li>
 </ul>
-<p><img alt="image" src="https://user-images.githubusercontent.com/62104945/162755373-dd603f6b-63e6-490f-9f1f-3d1cd8575ae7.png" /></p>
+<pre><code class="language-shell">git init
+git pull
+git checkout master
+git checkout -b brach_name # 创建分支
+</code></pre>
 <ul>
-<li>被取消时需要重新添加 bot，或者点进取消的 checks details 中重新跑</li>
+<li>修改文件，提交修改到远程仓库</li>
 </ul>
-<p><img alt="image" src="https://user-images.githubusercontent.com/62104945/162859989-7b44adbf-e5f2-4695-98c1-01473094fa32.png" /></p>
+<pre><code class="language-shell">git add .
+git commit -m &quot;comment&quot; # 或者 git commit -a
+git push git_name brach_name  # git_name 一般为 origin
+</code></pre>
+<ul>
+<li>复制指令中的链接到浏览器打开，进入一个PR创建页面（也可以在项目下的pull requests中找到这个页面）修改好命名和描述之后就可以提交到公开项目下</li>
+</ul>
+<h2 id="_3">常用指令</h2>
+<pre><code class="language-shell">git remote -v  # 查看远程仓库
+git branch -a  # 查看所有分支
+git remove -v  # 查看仓库
+git push -f functor:master
+git checkout branch_name  # 切换分支
+git checkout -b branch_name  # 创建分支
+https://www.cnblogs.com/wdyaoyao/p/10820181.html
+</code></pre>
+<h2 id="github">服务器登录GitHub并推送代码到自己账户下</h2>
+<pre><code>git config --global user.email zhongshsh5@mail2.sysu.edu.cn
+git config --global user.name zhongshsh
+git init
+git remote rm origin
+git remote add origin https://github.com/Oneflow-Inc/OneCloud
+</code></pre>
+<h2 id="add-commit">撤销 add 和 commit</h2>
+<p><a href="https://www.cnblogs.com/yszr/p/12360089.html">Git撤销add、commit</a> </p>
+<pre><code class="language-shell"># 撤销 add
+git status 查看当下更新的文件
+git reset HEAD 表示撤销上次add的所有文件
+git reset HEAD dir/dir/test.php 撤销指定文件
+
+# 撤销 commit
+git reset --soft HEAD^/HEAD~1  //这样就成功的撤销了你上次的commit（仅仅是撤回commit操作，代码仍然保留）
+
+# 如果commit注释写错了
+git commit --amend  //此时会进入默认vim编辑器，修改注释完毕后保存就好了。
+</code></pre>
+<h2 id="_4">注意事项</h2>
+<ul>
+<li>不要传输超过 100M 的文件  <a href="https://docs.github.com/cn/repositories/working-with-files/managing-large-files/about-large-files-on-github">关于 GitHub 上的大文件</a> </li>
+<li>先切换到已有分支再进行修改操作</li>
+<li>不要随意关闭和创建 issue，issue 只能 close，删不了的</li>
+<li>修改 PR 的名称会对已提交的 PR 产生什么影响？</li>
+</ul>
                 
               
               
@@ -694,7 +840,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="20220312-git.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: git 常用指令" rel="prev">
+        <a href="20220406-ssh.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: SSH 加速下载 GitHub 项目" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -703,20 +849,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              git 常用指令
+              SSH 加速下载 GitHub 项目
             </div>
           </div>
         </a>
       
       
         
-        <a href="../engineering/%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 技巧总结" rel="next">
+        <a href="20220411-CI.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 关于 PR CI" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              技巧总结
+              关于 PR CI
             </div>
           </div>
           <div class="md-footer__button md-icon">
