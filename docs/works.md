@@ -7,5 +7,6 @@
 | 20220407 | Vision模型兼容性测试              | 未完成，PyTorch 无 regionvit                                 |
 | 20220407 | 添加 Tensor.half                  | https://github.com/Oneflow-Inc/oneflow/pull/7971             |
 | 20220408 | 添加 nn.functional.conv_transpose | https://github.com/Oneflow-Inc/oneflow/pull/7991             |
+| 20220412 | 添加 nn.init.orthogonal           | https://github.com/Oneflow-Inc/oneflow/pull/8009             |
 |          |                                   |                                                              |
 
