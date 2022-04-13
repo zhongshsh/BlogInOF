@@ -2,8 +2,8 @@
 
 参考：
 
-- https://pytorch.org/docs/stable/_modules/torch/nn/init.html#orthogonal_
-- https://github.com/apache/incubator-mxnet/blob/5f0efbbe33a1ef2af140e91a8fd367cd3bf92373/python/mxnet/initializer.py#L547
+- [PyTorch](https://pytorch.org/docs/stable/_modules/torch/nn/init.html#orthogonal)
+- [mxnet](https://github.com/apache/incubator-mxnet/blob/5f0efbbe33a1ef2af140e91a8fd367cd3bf92373/python/mxnet/initializer.py#L547)
 
 ## 工作流程
 
@@ -74,6 +74,8 @@ def _init_by_initializer_conf(tensor, initializer_conf, random_seed=None):
 
 ![image (4)](https://user-images.githubusercontent.com/62104945/163172927-7fa69902-cea1-497a-98d5-84d8dd0a60b9.png)
 ![image (5)](https://user-images.githubusercontent.com/62104945/163172945-a40a7683-e365-4ed5-bccf-b9723a050042.png)
+
+当前对齐了同一网页，但是并没有做到整个文档对齐。
 
 ### 算子对齐问题
 
