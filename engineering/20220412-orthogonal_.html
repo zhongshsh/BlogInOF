@@ -720,8 +720,8 @@
                 <h1 id="nn-init-orthogonal"><a href="https://github.com/Oneflow-Inc/oneflow/pull/8009">添加 nn init orthogonal</a></h1>
 <p>参考：</p>
 <ul>
-<li>https://pytorch.org/docs/stable/<em>modules/torch/nn/init.html#orthogonal</em></li>
-<li>https://github.com/apache/incubator-mxnet/blob/5f0efbbe33a1ef2af140e91a8fd367cd3bf92373/python/mxnet/initializer.py#L547</li>
+<li><a href="https://pytorch.org/docs/stable/_modules/torch/nn/init.html#orthogonal">PyTorch</a></li>
+<li><a href="https://github.com/apache/incubator-mxnet/blob/5f0efbbe33a1ef2af140e91a8fd367cd3bf92373/python/mxnet/initializer.py#L547">mxnet</a></li>
 </ul>
 <h2 id="_1">工作流程</h2>
 <p>通过 VSCode 文件夹查找进行文件溯源，溯源流程如下：</p>
@@ -781,6 +781,7 @@
 <p><img alt="image (6)" src="https://user-images.githubusercontent.com/62104945/163172966-b55fd976-9c95-4a9e-a33d-27673a9845a5.png" /></p>
 <p><img alt="image (4)" src="https://user-images.githubusercontent.com/62104945/163172927-7fa69902-cea1-497a-98d5-84d8dd0a60b9.png" />
 <img alt="image (5)" src="https://user-images.githubusercontent.com/62104945/163172945-a40a7683-e365-4ed5-bccf-b9723a050042.png" /></p>
+<p>当前对齐了同一网页，但是并没有做到整个文档对齐。</p>
 <h3 id="_5">算子对齐问题</h3>
 <p>测试用不了 AutoTest，因为 init 模块的算子内嵌了通过分布函数生成权值的模块，本身就具有随机性。因此对算子是否对齐进行了分析。</p>
 <p>测试 <a href="https://pytorch.org/docs/stable/_modules/torch/nn/init.html#orthogonal_">PyTorch 版本的代码</a>，发现填充矩阵并不是严格的（半）正定矩阵，矩阵与矩阵转置的乘积的对角线值为 1，但乘积其他元素不一定为 0，而且乘积是对称矩阵。说明矩阵向量是单位向量，但是不一定正交。测试代码如下：</p>
