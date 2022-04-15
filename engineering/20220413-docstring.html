@@ -14,7 +14,7 @@
     
     
       
-        <title>23 ninja build stopped - Shanshan's Blog</title>
+        <title>docString+Sphinx 生成接口文档 - Shanshan's Blog</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#23-ninja-build-stopped-subcommand-failed" class="md-skip">
+        <a href="#docstringsphinx" class="md-skip">
           跳转至
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              23 ninja build stopped
+              docString+Sphinx 生成接口文档
             
           </span>
         </div>
@@ -432,21 +432,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="20220408-23%20ninja%20build%20stopped.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="20220408-23%20ninja%20build%20stopped.html" class="md-nav__link">
         23 ninja build stopped
       </a>
-      
     </li>
   
 
@@ -502,11 +492,79 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="20220413-docstring.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          docString+Sphinx 生成接口文档
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="20220413-docstring.html" class="md-nav__link md-nav__link--active">
         docString+Sphinx 生成接口文档
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    环境准备
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sphinx" class="md-nav__link">
+    新建 Sphinx 项目
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    新建 Python 文件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sphnix-python" class="md-nav__link">
+    关联 Sphnix 与 Python 文件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    编译
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -617,6 +675,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    环境准备
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sphinx" class="md-nav__link">
+    新建 Sphinx 项目
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    新建 Python 文件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sphnix-python" class="md-nav__link">
+    关联 Sphnix 与 Python 文件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    编译
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -628,72 +729,123 @@
               
                 
                 
-                <h1 id="23-ninja-build-stopped-subcommand-failed">23 ninja: build stopped: subcommand failed</h1>
-<p>debug log：</p>
-<ul>
-<li>更改 miniconda 为 anaconda，同样报错</li>
-<li>按照 https://github.com/Oneflow-Inc/conda-env 配置环境，同样报错</li>
-<li>重新 git clone git@github.com:Oneflow-Inc/oneflow.git，同样报错</li>
-<li>考虑到 cuda 依赖包等问题，安装 PyTorch，同样报错</li>
-<li>考虑到不管咋搞 black 版本报错都存在，因此新建一个干净的环境，更换python版本，同样报错</li>
-<li>将 click 从 8.1 版本更换成 8.0 版本，可以解决问题，参考  https://github.com/psf/black/issues/2964 </li>
-</ul>
-<p>报错如下</p>
-<pre><code>[226/1835] Performing build step for 'lz4'
-make[1]: Entering directory '/home/zhongshanshan/workspace/tmp/oneflow/build/lz4/src/lz4/lib'
-compiling static library
-make[1]: Leaving directory '/home/zhongshanshan/workspace/tmp/oneflow/build/lz4/src/lz4/lib'
-make[1]: Entering directory '/home/zhongshanshan/workspace/tmp/oneflow/build/lz4/src/lz4/lib'
-compiling dynamic library 1.9.2
-creating versioned links
-make[1]: Leaving directory '/home/zhongshanshan/workspace/tmp/oneflow/build/lz4/src/lz4/lib'
-[234/1835] cd /home/zhongshanshan/workspace/tmp/oneflow/...workspace/tmp/oneflow/tools/oneflow-tblgen --fix --quiet
-FAILED: CMakeFiles/of_format /home/zhongshanshan/workspace/tmp/oneflow/build/CMakeFiles/of_format 
-cd /home/zhongshanshan/workspace/tmp/oneflow/build &amp;&amp; /home/zhongshanshan/anaconda3/envs/py38/bin/python3 /home/zhongshanshan/workspace/tmp/oneflow/ci/check/run_license_format.py -i /home/zhongshanshan/workspace/tmp/oneflow/oneflow --fix &amp;&amp; /home/zhongshanshan/anaconda3/envs/py38/bin/python3 /home/zhongshanshan/workspace/tmp/oneflow/ci/check/run_license_format.py -i /home/zhongshanshan/workspace/tmp/oneflow/python --fix --exclude=&quot;oneflow/include&quot; --exclude=&quot;oneflow/core&quot; &amp;&amp; /home/zhongshanshan/anaconda3/envs/py38/bin/python3 /home/zhongshanshan/workspace/tmp/oneflow/ci/check/run_clang_format.py --source_dir /home/zhongshanshan/workspace/tmp/oneflow/oneflow --fix --quiet &amp;&amp; /home/zhongshanshan/anaconda3/envs/py38/bin/python3 /home/zhongshanshan/workspace/tmp/oneflow/ci/check/run_py_format.py --source_dir /home/zhongshanshan/workspace/tmp/oneflow/python --fix &amp;&amp; /home/zhongshanshan/anaconda3/envs/py38/bin/python3 /home/zhongshanshan/workspace/tmp/oneflow/ci/check/run_clang_format.py --source_dir /home/zhongshanshan/workspace/tmp/oneflow/tools/oneflow-tblgen --fix --quiet
-[files] 2473
-[files] 730
-clang-format version 10.0.0-4ubuntu1 
-
-clang-format version 11.0.0
-
-2458 files checked
-Traceback (most recent call last):
-  File &quot;/home/zhongshanshan/anaconda3/envs/py38/lib/python3.8/runpy.py&quot;, line 192, in _run_module_as_main
-    return _run_code(code, main_globals, None,
-  File &quot;/home/zhongshanshan/anaconda3/envs/py38/lib/python3.8/runpy.py&quot;, line 85, in _run_code
-    exec(code, run_globals)
-  File &quot;/home/zhongshanshan/.local/lib/python3.8/site-packages/black.py&quot;, line 4139, in &lt;module&gt;
-    patched_main()
-  File &quot;/home/zhongshanshan/.local/lib/python3.8/site-packages/black.py&quot;, line 4134, in patched_main
-    patch_click()
-  File &quot;/home/zhongshanshan/.local/lib/python3.8/site-packages/black.py&quot;, line 4123, in patch_click
-    from click import _unicodefun  # type: ignore
-ImportError: cannot import name '_unicodefun' from 'click' (/home/zhongshanshan/.local/lib/python3.8/site-packages/click/__init__.py)
-Please install black 19.10b0. For instance, run 'python3 -m pip install black==19.10b0 --user'
-[295/1835] Performing configure step for 'opencv'
-loading initial cache file /home/zhongshanshan/workspace/tmp/oneflow/build/opencv/tmp/opencv-cache-Release.cmake
--- The CXX compiler identification is GNU 9.4.0
+                <h1 id="docstringsphinx">docString+Sphinx 生成接口文档</h1>
+<p>docString 编写可参考主流标准。</p>
+<h2 id="_1">环境准备</h2>
+<pre><code class="language-shell">pip install sphinx  # Sphinx 主要功能是使用 reStructuredText, 把许多文件组织成一份结构合理的文档
+pip install sphinx_rtd_theme # Sphinx 第三方主题
 </code></pre>
-<p>最终的报错</p>
-<pre><code>a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
-Compiling  broadcast.cu                        &gt; /home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/build/obj/collectives/device/broadcast_sumpostdiv_u64.o
-nvcc warning : The 'compute_35', 'compute_37', 'compute_50', 'sm_35', 'sm_37' and 'sm_50' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
-Compiling  broadcast.cu                        &gt; /home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/build/obj/collectives/device/broadcast_sumpostdiv_f16.o
-nvcc warning : The 'compute_35', 'compute_37', 'compute_50', 'sm_35', 'sm_37' and 'sm_50' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
-Compiling  broadcast.cu                        &gt; /home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/build/obj/collectives/device/broadcast_sumpostdiv_f32.o
-nvcc warning : The 'compute_35', 'compute_37', 'compute_50', 'sm_35', 'sm_37' and 'sm_50' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
-Compiling  broadcast.cu                        &gt; /home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/build/obj/collectives/device/broadcast_sumpostdiv_f64.o
-nvcc warning : The 'compute_35', 'compute_37', 'compute_50', 'sm_35', 'sm_37' and 'sm_50' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
-Compiling  broadcast.cu                        &gt; /home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/build/obj/collectives/device/broadcast_sumpostdiv_bf16.o
-nvcc warning : The 'compute_35', 'compute_37', 'compute_50', 'sm_35', 'sm_37' and 'sm_50' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
-nvcc warning : The 'compute_35', 'compute_37', 'compute_50', 'sm_35', 'sm_37' and 'sm_50' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
-Archiving  objects                             &gt; /home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/build/obj/collectives/device/colldevice.a
-make[2]: Leaving directory '/home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/src/collectives/device'
-Linking    libnccl.so.2.11.4                   &gt; /home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/build/lib/libnccl.so.2.11.4
-Archiving  libnccl_static.a                    &gt; /home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/build/lib/libnccl_static.a
-/home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/src
-make[1]: Leaving directory '/home/zhongshanshan/workspace/tmp/oneflow/build/nccl/src/nccl/src'
-ninja: build stopped: subcommand failed.
+<h2 id="sphinx">新建 Sphinx 项目</h2>
+<ul>
+<li>创建文件夹 <code>docTest</code>，进入 <code>docTest</code>，创建 python 文件放置的目录 <code>python</code>、文档目录 <code>doc</code>，进入 <code>doc</code> 运行指令 <code>sphinx-quickstart</code></li>
+</ul>
+<pre><code class="language-shell">mkdir docTest
+cd docTest
+mkdir python
+mkdir doc
+cd doc
+sphinx-quickstart
+</code></pre>
+<ul>
+<li>接下来会出现一些配置信息</li>
+</ul>
+<pre><code class="language-shell">……
+You have two options for placing the build directory for Sphinx output.
+Either, you use a directory &quot;_build&quot; within the root path, or you separate
+&quot;source&quot; and &quot;build&quot; directories within the root path.
+&gt; Separate source and build directories (y/n) [n]: y  # 是否使用 source 和 build 文件夹分离的方式存储 Sphinx 输出
+
+The project name will occur in several places in the built documentation.
+&gt; Project name: docTest      # 项目名称
+&gt; Author name(s): shan       # 作者名称
+&gt; Project release []: 0.0.1  # 项目版本号
+
+If the documents are to be written in a language other than English,
+you can select a language here by its language code. Sphinx will then
+translate text that it generates into that language.
+
+For a list of supported codes, see
+https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-language.
+&gt; Project language [en]:     # 文档语言，回车默认即可
+
+……
+</code></pre>
+<ul>
+<li>成功运行之后在 <code>docTest/doc/</code> 下生成如下内容</li>
+</ul>
+<pre><code class="language-shell">.
+├── build           # 用来存放通过make html生成文档网页文件的目录
+├── make.bat
+├── Makefile
+└── source          # 存放用于生成文档的源文件
+    ├── conf.py     # 在此文件修改项目的配置信息
+    ├── index.rst   # 主文档
+    ├── _static
+    └── _templates
+</code></pre>
+<ul>
+<li>在 <code>docTest/doc/source/conf.py</code> 中修改配置：</li>
+</ul>
+<pre><code class="language-python">import os
+import sys
+sys.path.insert(0, os.path.abspath('../../python/'))   # python 文件位置，确保python源代码所在的包在系统路径中可以找到
+
+html_theme = 'sphinx_rtd_theme'   # html 风格
+
+extensions = ['sphinx.ext.autodoc']  
+</code></pre>
+<h2 id="python">新建 Python 文件</h2>
+<p>为了展示文件和文件夹的链接方式，在 <code>docTest/python</code> 分别新建文件和文件夹</p>
+<ul>
+<li>
+<p>新建文件夹 <code>docTest/python/util/</code>，在里面放上一个文件 <code>initializers.py</code></p>
+</li>
+<li>
+<p>新建文件 <code>docTest/python/orthogonal.py</code></p>
+</li>
+</ul>
+<h2 id="sphnix-python">关联 Sphnix 与 Python 文件</h2>
+<p>主要使用 <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">rst文件</a>。在 Sphnix 中，每一个 rst 代表一个单独的 html 页面，一般以 index.rst 作为主文件</p>
+<ul>
+<li>util.rst：链接到 util 文件夹。由于 initializer.py 中 calculate_gain 是方法，所以此处用 <code>automodule</code> 进行寻址。如果添加的是 class，使用 <code>autoclass</code></li>
+</ul>
+<pre><code class="language-rst">Util
+============================================================
+.. currentmodule:: util.initializers
+.. automodule:: util.initializers
+    :members: 
+        calculate_gain
+    :member-order: bysource
+</code></pre>
+<ul>
+<li>index.rst：通过不同的方式添加网页和内容</li>
+</ul>
+<pre><code class="language-rst">Welcome to demo's API Documentation
+===================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+Folder in Python
+======================
+.. toctree::
+   :maxdepth: 4
+
+   util
+
+
+File in Python
+=======================
+.. automodule:: orthogonal
+   :members:
+
+</code></pre>
+<h2 id="_2">编译</h2>
+<ul>
+<li>在 <code>docTest/doc</code> 文件下执行如下代码，即能在 <code>`docTest/doc/build/html</code> 文件夹下获得编译好的网页</li>
+</ul>
+<pre><code class="language-shell">make html
 </code></pre>
                 
               
@@ -719,7 +871,7 @@ ninja: build stopped: subcommand failed.
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="20220406-22%20core%20dumped.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: 22 core dumped" rel="prev">
+        <a href="20220412-orthogonal_.html" class="md-footer__link md-footer__link--prev" aria-label="上一页: 添加nn.init.orthogonal" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -728,20 +880,20 @@ ninja: build stopped: subcommand failed.
               <span class="md-footer__direction">
                 上一页
               </span>
-              22 core dumped
+              添加nn.init.orthogonal
             </div>
           </div>
         </a>
       
       
         
-        <a href="20220407-%E6%B7%BB%E5%8A%A0half.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 添加half" rel="next">
+        <a href="../onecloud/20220408-%E5%AF%B9%E9%BD%90%E8%BF%87%E7%A8%8B%E7%BB%8F%E9%AA%8C%E6%B2%89%E6%B7%80.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 对齐过程经验沉淀" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              添加half
+              对齐过程经验沉淀
             </div>
           </div>
           <div class="md-footer__button md-icon">
