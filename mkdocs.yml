@@ -51,6 +51,7 @@ nav:
       - 添加deconv: engineering/20220408-添加deconv.md
       - AutoTest: engineering/20220411-autotest.md
       - 添加nn.init.orthogonal: engineering/20220412-orthogonal_.md
+      - docString+Sphinx 生成接口文档: engineering/20220413-docstring.md
 
     - 云平台:
       - 对齐过程经验沉淀: onecloud/20220408-对齐过程经验沉淀.md
