@@ -1,4 +1,6 @@
 #   **Hi there 👋**
 
-斧正传送链 -> https://github.com/zhongshsh/BlogInOF
+[交流传送链 :bug::bug::bug:](https://github.com/zhongshsh/BlogInOF/issues/new)
+
+
 

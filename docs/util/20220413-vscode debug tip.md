@@ -36,8 +36,8 @@
 
 ## 点击跳转
 
-- 切换到 oneflow build 目录，在之前运行Cmake 的 flag 的基础上添加一个 cmake 参数 `-DCMAKE_EXPORT_COMPILE_COMMANDS=1` 运行 cmake。
-- 在 oneflow 文件夹下创建软链接 `ln -s build/compile_commands.json ../compile_commands.json`，将 compile_commands.json 链接到工作目录
+- 切换到 [oneflow](https://github.com/Oneflow-Inc/oneflow) build 目录，在之前运行 cmake 的 flag 的基础上添加一个 cmake 参数 `-DCMAKE_EXPORT_COMPILE_COMMANDS=1` 。
+- 在工作目录下创建软链接：`ln -s oneflow/build/compile_commands.json ../compile_commands.json`，将 compile_commands.json 链接到工作目录
 - 下载并解压 [LLVM](https://github.com/clangd/clangd/releases)
 - 在服务器工作目录下新建 .vscode/settings.json，文件内容为
 
