@@ -528,36 +528,56 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    环境准备
+    问题
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#demo" class="md-nav__link">
+    Demo
+  </a>
+  
+    <nav class="md-nav" aria-label="Demo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    环境准备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sphinx" class="md-nav__link">
     新建 Sphinx 项目
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#python" class="md-nav__link">
     新建 Python 文件
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#sphnix-python" class="md-nav__link">
     关联 Sphnix 与 Python 文件
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     编译
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -683,36 +703,56 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    环境准备
+    问题
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#demo" class="md-nav__link">
+    Demo
+  </a>
+  
+    <nav class="md-nav" aria-label="Demo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    环境准备
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sphinx" class="md-nav__link">
     新建 Sphinx 项目
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#python" class="md-nav__link">
     新建 Python 文件
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#sphnix-python" class="md-nav__link">
     关联 Sphnix 与 Python 文件
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     编译
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -731,11 +771,33 @@
                 
                 <h1 id="docstringsphinx">docString+Sphinx 生成接口文档</h1>
 <p>docString 编写可参考主流标准。</p>
-<h2 id="_1">环境准备</h2>
+<h2 id="_1">问题</h2>
+<p>在项目的doc设置下，</p>
+<pre><code class="language-python">def test():
+    &quot;&quot;&quot;
+    Parameters:
+        input (oneflow.Tensor): the input Tensor.
+        dim (int or tuple of python:ints): the dimension or dimensions to reduce. 
+        keepdim (bool): whether the output tensor has `dim` retained or not.
+
+    解决方案
+
+    Parameters:
+        input (oneflow.Tensor): the input Tensor.
+        dim (int, Tuple[int]): the dimension or dimensions to reduce. 
+        keepdim (bool): whether the output tensor has `dim` retained or not.
+
+    &quot;&quot;&quot;
+    return 
+
+</code></pre>
+<p><img alt="image" src="https://user-images.githubusercontent.com/62104945/163786074-508f8e1f-f6f4-4372-a106-a9d4d389b2af.png" /></p>
+<h2 id="demo">Demo</h2>
+<h3 id="_2">环境准备</h3>
 <pre><code class="language-shell">pip install sphinx  # Sphinx 主要功能是使用 reStructuredText, 把许多文件组织成一份结构合理的文档
 pip install sphinx_rtd_theme # Sphinx 第三方主题
 </code></pre>
-<h2 id="sphinx">新建 Sphinx 项目</h2>
+<h3 id="sphinx">新建 Sphinx 项目</h3>
 <ul>
 <li>创建文件夹 <code>docTest</code>，进入 <code>docTest</code>，创建 python 文件放置的目录 <code>python</code>、文档目录 <code>doc</code>，进入 <code>doc</code> 运行指令 <code>sphinx-quickstart</code></li>
 </ul>
@@ -794,7 +856,7 @@ html_theme = 'sphinx_rtd_theme'   # html 风格
 
 extensions = ['sphinx.ext.autodoc']  
 </code></pre>
-<h2 id="python">新建 Python 文件</h2>
+<h3 id="python">新建 Python 文件</h3>
 <p>为了展示文件和文件夹的链接方式，在 <code>docTest/python</code> 分别新建文件和文件夹</p>
 <ul>
 <li>
@@ -804,7 +866,7 @@ extensions = ['sphinx.ext.autodoc']
 <p>新建文件 <code>docTest/python/orthogonal.py</code></p>
 </li>
 </ul>
-<h2 id="sphnix-python">关联 Sphnix 与 Python 文件</h2>
+<h3 id="sphnix-python">关联 Sphnix 与 Python 文件</h3>
 <p>主要使用 <a href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">rst文件</a>。在 Sphnix 中，每一个 rst 代表一个单独的 html 页面，一般以 index.rst 作为主文件</p>
 <ul>
 <li>util.rst：链接到 util 文件夹。由于 initializer.py 中 calculate_gain 是方法，所以此处用 <code>automodule</code> 进行寻址。如果添加的是 class，使用 <code>autoclass</code></li>
@@ -841,7 +903,7 @@ File in Python
    :members:
 
 </code></pre>
-<h2 id="_2">编译</h2>
+<h3 id="_3">编译</h3>
 <ul>
 <li>在 <code>docTest/doc</code> 文件下执行如下代码，即能在 <code>`docTest/doc/build/html</code> 文件夹下获得编译好的网页</li>
 </ul>
