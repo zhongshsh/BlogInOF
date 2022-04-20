@@ -1,6 +1,6 @@
 # VSCode debug 工具
 
-工作目录：VSCode 远程打开的文件夹
+工作目录指 VSCode 远程打开的文件夹。
 
 ## debug 
 

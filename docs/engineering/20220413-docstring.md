@@ -2,9 +2,37 @@
 
 docString 编写可参考主流标准。
 
+## 问题
+
+在项目的doc设置下，
+
+```python
+def test():
+    """
+    Parameters:
+        input (oneflow.Tensor): the input Tensor.
+        dim (int or tuple of python:ints): the dimension or dimensions to reduce. 
+        keepdim (bool): whether the output tensor has `dim` retained or not.
+        
+    解决方案
+    
+	Parameters:
+        input (oneflow.Tensor): the input Tensor.
+        dim (int, Tuple[int]): the dimension or dimensions to reduce. 
+        keepdim (bool): whether the output tensor has `dim` retained or not.
+       
+    """
+    return 
+    
+```
+
+![image](https://user-images.githubusercontent.com/62104945/163786074-508f8e1f-f6f4-4372-a106-a9d4d389b2af.png)
 
 
-## 环境准备
+
+## Demo
+
+### 环境准备
 
 ```shell
 pip install sphinx  # Sphinx 主要功能是使用 reStructuredText, 把许多文件组织成一份结构合理的文档
@@ -13,7 +41,7 @@ pip install sphinx_rtd_theme # Sphinx 第三方主题
 
 
 
-## 新建 Sphinx 项目
+### 新建 Sphinx 项目
 
 - 创建文件夹 `docTest`，进入 `docTest`，创建 python 文件放置的目录 `python`、文档目录 `doc`，进入 `doc` 运行指令 `sphinx-quickstart`
 
@@ -79,7 +107,7 @@ extensions = ['sphinx.ext.autodoc']
 
 
 
-## 新建 Python 文件
+### 新建 Python 文件
 
 为了展示文件和文件夹的链接方式，在 `docTest/python` 分别新建文件和文件夹
 
@@ -89,7 +117,7 @@ extensions = ['sphinx.ext.autodoc']
 
 
 
-## 关联 Sphnix 与 Python 文件
+### 关联 Sphnix 与 Python 文件
 
 主要使用 [rst文件](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)。在 Sphnix 中，每一个 rst 代表一个单独的 html 页面，一般以 index.rst 作为主文件
 
@@ -132,7 +160,7 @@ File in Python
 
 
 
-## 编译
+### 编译
 
 - 在 `docTest/doc` 文件下执行如下代码，即能在 ``docTest/doc/build/html` 文件夹下获得编译好的网页
 
