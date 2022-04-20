@@ -168,7 +168,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../util/20220307-mkdocs.html" class="md-tabs__link">
+      <a href="../util/20220420-%E5%BC%80%E5%8F%91%E5%BF%85%E7%9C%8B%E7%9A%84guide.html" class="md-tabs__link">
         常用工具
       </a>
     </li>
@@ -295,6 +295,18 @@
           常用工具
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../util/20220420-%E5%BC%80%E5%8F%91%E5%BF%85%E7%9C%8B%E7%9A%84guide.html" class="md-nav__link">
+        开发必看的guide
+      </a>
+    </li>
+  
+
           
             
   
@@ -610,8 +622,8 @@
 <li>查看文档，如查看 nn.functional.conv2d 的文档，可以通过 nn.functional.conv2d.__doc__</li>
 <li>测试样例不宜过大，因为ci会多进程跑测试，每个样例的内存不能太大，不然可能就oom了 </li>
 <li>yaml 中 list 的初始化需要根据 维度 而定，如 Int32List[3] dilation=1 对于 3d， Int32List[2] dilation=1 对于 2d</li>
-<li>如果在文档字符串中使用任何反斜杠转义，那么需要用<code>r"""your raw docstring"""</code>。</li>
-<li>doc 规定文档字符串的代码要有个变量接收结果 outputs = F.conv1d(inputs, filters) ，不能直接 F.conv1d(inputs, filters) 。可以运行 <code>./python/oneflow/test/modules/test_functional_docstr.py</code> 来检查文档是否有问题。文档编写参考 <a href="https://github.com/Oneflow-Inc/OneTeam/blob/master/tutorial/howto_write_api_docs.md">howto_write_api_docs.md at master</a> </li>
+<li>如果在文档字符串中使用任何反斜杠转义，那么需要用<code>r"""your raw docstring"""</code></li>
+<li>doc 规定文档字符串的代码要有个变量接收结果 outputs = F.conv1d(inputs, filters) ，不能直接 F.conv1d(inputs, filters) 。可以运行 <code>./python/oneflow/test/modules/test_functional_docstr.py</code> 来检查文档是否有问题</li>
 <li></li>
 </ul>
                 
