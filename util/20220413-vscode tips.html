@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vscode-debug" class="md-skip">
+        <a href="#vscode" class="md-skip">
           跳转至
         </a>
       
@@ -406,7 +406,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="20220413-vscode%20debug%20tip.html" class="md-nav__link md-nav__link--active">
+      <a href="20220413-vscode%20tips.html" class="md-nav__link md-nav__link--active">
         VSCode debug 工具
       </a>
       
@@ -425,6 +425,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    查看修改历史
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#debug" class="md-nav__link">
     debug
   </a>
@@ -432,7 +439,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     点击跳转
   </a>
   
@@ -700,6 +707,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    查看修改历史
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#debug" class="md-nav__link">
     debug
   </a>
@@ -707,7 +721,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     点击跳转
   </a>
   
@@ -726,8 +740,15 @@
               
                 
                 
-                <h1 id="vscode-debug">VSCode debug 工具</h1>
+                <h1 id="vscode">VSCode 工具</h1>
 <p>工作目录指 VSCode 远程打开的文件夹。</p>
+<h2 id="_1">查看修改历史</h2>
+<p>安装插件 Git History Diff，插件的作用如下：</p>
+<ul>
+<li>用于查看文件的修改来自哪一个 commit</li>
+<li>查看文件修改历史：打开文件，按 ctrl + shift + P，在出现的输入框中输入 File History，就可以查看到文件的修改历史。在修改历史中点击 commit id，就可以进入 commit 详情页面</li>
+<li>查看当前分支与任一分支的不同：按 ctrl + shift + P，在出现的输入框中输入 View Branch Diff</li>
+</ul>
 <h2 id="debug">debug</h2>
 <ul>
 <li>
@@ -759,7 +780,7 @@
 <li>此时在运行文件按 F5 即开始调试。可以在 python 或者 C++ 加断点进行调试，VSCode 会输出调用栈等信息，添加断点要注意是否在 Setting 中设置允许添加断点</li>
 </ul>
 <p><img alt="image" src="https://user-images.githubusercontent.com/62104945/163183530-8f17dbf5-44cf-4bf8-8eb5-5c96fe7477ff.png" /></p>
-<h2 id="_1">点击跳转</h2>
+<h2 id="_2">点击跳转</h2>
 <ul>
 <li>切换到 <a href="https://github.com/Oneflow-Inc/oneflow">oneflow</a> build 目录，在之前运行 cmake 的 flag 的基础上添加一个 cmake 参数 <code>-DCMAKE_EXPORT_COMPILE_COMMANDS=1</code> 。</li>
 <li>在工作目录下创建软链接：<code>ln -s oneflow/build/compile_commands.json ../compile_commands.json</code>，将 compile_commands.json 链接到工作目录</li>
