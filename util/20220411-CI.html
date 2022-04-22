@@ -746,19 +746,20 @@
 <li>等待 CI 结束……</li>
 </ul>
 <h2 id="_2">注意事项</h2>
-<p><img alt="1649670072655" src="https://user-images.githubusercontent.com/62104945/162732477-29ab079e-58c6-4663-b093-928fd6b22cb8.png" /></p>
 <ul>
 <li>如果是 bot 来 format 代码，那么需要重新添加 bot 之后才会继续跑 CI 流程</li>
-<li>有时候会卡在某些错误，需要根据错误提示修改代码</li>
+</ul>
+<p><img alt="1649670072655" src="https://user-images.githubusercontent.com/62104945/162732477-29ab079e-58c6-4663-b093-928fd6b22cb8.png" /></p>
+<ul>
 <li>waiting queue，等待其执行结束即可</li>
 </ul>
 <p><img alt="image" src="https://user-images.githubusercontent.com/62104945/162755373-dd603f6b-63e6-490f-9f1f-3d1cd8575ae7.png" /></p>
 <ul>
-<li>被取消时需要重新添加 bot，或者点进取消的 checks details 中重新跑</li>
+<li>如果 Bot 被取消了并且 ci 错误和自己的 pr 无关，需要重新点 bot 请求 ci，以及如果 pr 很久都没有被调度到可以尝试取消 bot，然后刷新网页重新点一下 bot ，或者点进取消的 checks details 中重新跑</li>
 </ul>
 <p><img alt="image" src="https://user-images.githubusercontent.com/62104945/162859989-7b44adbf-e5f2-4695-98c1-01473094fa32.png" /></p>
 <ul>
-<li>出现一些报错，例如如下错误，可以尝试在服务器复现，复现不了的话可以先注释 test_crossformer_compatibility。如果 Bot 被取消了并且 ci 错误和自己的 pr 无关，需要重新点 bot 请求 ci，以及如果 pr 很久都没有被调度到可以尝试取消 bot，然后刷新网页重新点一下 bot </li>
+<li>有时候会卡在某些错误，需要根据错误提示修改代码，例如如下错误，可以尝试在服务器复现，复现不了的话可以先注释 test_crossformer_compatibility</li>
 </ul>
 <p><img alt="image" src="https://user-images.githubusercontent.com/62104945/164135953-59aae1d7-2123-45a6-980e-c3ffe7515af0.png" /></p>
 <ul>
