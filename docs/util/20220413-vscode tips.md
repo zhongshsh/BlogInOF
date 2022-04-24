@@ -6,7 +6,7 @@
 
 ## 查看修改历史
 
-安装插件 Git History Diff，插件的作用如下：
+VSCode 安装插件 Git History Diff，插件的作用如下：
 
 - 用于查看文件的修改来自哪一个 commit
 - 查看文件修改历史：打开文件，按 ctrl + shift + P，在出现的输入框中输入 File History，就可以查看到文件的修改历史。在修改历史中点击 commit id，就可以进入 commit 详情页面
