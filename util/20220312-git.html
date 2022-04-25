@@ -450,6 +450,13 @@
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
+    撤销本地修改
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     注意事项
   </a>
   
@@ -571,7 +578,7 @@
   
     <li class="md-nav__item">
       <a href="../engineering/20220407-%E6%B7%BB%E5%8A%A0half.html" class="md-nav__link">
-        添加half
+        添加 half
       </a>
     </li>
   
@@ -583,7 +590,7 @@
   
     <li class="md-nav__item">
       <a href="../engineering/20220408-%E6%B7%BB%E5%8A%A0deconv.html" class="md-nav__link">
-        添加deconv
+        添加 deconv
       </a>
     </li>
   
@@ -607,7 +614,7 @@
   
     <li class="md-nav__item">
       <a href="../engineering/20220412-orthogonal_.html" class="md-nav__link">
-        添加nn.init.orthogonal
+        添加 nn.init.orthogonal
       </a>
     </li>
   
@@ -620,6 +627,18 @@
     <li class="md-nav__item">
       <a href="../engineering/20220413-docstring.html" class="md-nav__link">
         docString+Sphinx 生成接口文档
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engineering/20220422-%E4%BF%AE%E6%94%B9reduce%20ops.html" class="md-nav__link">
+        修改 reduce ops
       </a>
     </li>
   
@@ -802,6 +821,13 @@
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
+    撤销本地修改
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     注意事项
   </a>
   
@@ -908,7 +934,10 @@ git reset --soft HEAD^/HEAD~1  //这样就成功的撤销了你上次的commit�
 # 如果commit注释写错了
 git commit --amend  //此时会进入默认vim编辑器，修改注释完毕后保存就好了。
 </code></pre>
-<h2 id="_4">注意事项</h2>
+<h2 id="_4">撤销本地修改</h2>
+<pre><code class="language-shell">git checkout . 
+</code></pre>
+<h2 id="_5">注意事项</h2>
 <ul>
 <li>不要传输超过 100M 的文件  <a href="https://docs.github.com/cn/repositories/working-with-files/managing-large-files/about-large-files-on-github">关于 GitHub 上的大文件</a> </li>
 <li>先切换到已有分支再进行修改操作</li>
