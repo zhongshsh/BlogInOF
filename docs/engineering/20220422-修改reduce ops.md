@@ -38,10 +38,15 @@ ninja: build stopped: subcommand failed.
 
 ## 问题2
 
-如何让同一个接口传入int 和 list？我看到有三种实现版本
+### 如何让同一个接口传入int 和 list？
+
+在接口文件 yaml 中用 Int32List[1] axis 即可同时接收 int 和 list。
+
+### 如何初始化一个同时接受int和list的接口？
+
+使用 Int32List[1] axis，则无法在缺失 axis 的情况下直接计算结果。我看到有两种解决方案：
 
 - Int32List[1] axis=None
-- Int32List[1] axis
 - 写两个接口，例如
 
 ```
@@ -51,13 +56,11 @@ signature: [
 ]
 ```
 
-选择 Int32List[1] axis=None `/oneflow/core/functional/impl/nn_functor.cpp` 会报错，显示参数不匹配，这个文件调用和初始化了 ReduceSum，即使将 axis 从开始的 {} 写成 {NULL}，仍然会出现奇怪的其他文件报错。
-
-使用 Int32List[1] axis，则无法在缺失 axis 的情况下直接计算结果。
-
-最终选择写两个接口。写两个接口同样存在瑕疵，即不可以使用 axis=None，应当使用 axis=[]。
+选择 Int32List[1] axis=None时， `/oneflow/core/functional/impl/nn_functor.cpp` 会报错，显示参数不匹配，这个文件调用和初始化了 ReduceSum。即使将`nn_functor.cpp` 的 axis 从开始的 {} 写成 {NULL}，仍然会出现奇怪的其他文件报错。但看到其他接口有这种用法。为了避免修改其他文件导致其他问题，最终选择写两个接口。写两个接口同样存在瑕疵，即在python tensor sum 接口中不可以使用 axis=None，应当使用 axis=[]。
 
 review 的时候有同学建议同类中实现两次不同参数的 operator ，但是阅读 [功能接口](https://github.com/Oneflow-Inc/oneflow/wiki/Functional-Interface) 发现接口必须是正交的。
+
+
 
 ## 问题3
 
