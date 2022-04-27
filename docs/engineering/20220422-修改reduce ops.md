@@ -55,9 +55,9 @@ signature: [
 
 使用 Int32List[1] axis，则无法在缺失 axis 的情况下直接计算结果。
 
-最终选择写两个接口。写两个接口同样存在瑕疵，即不可以使用 axis=None，应当使用 axis=[]
+最终选择写两个接口。写两个接口同样存在瑕疵，即不可以使用 axis=None，应当使用 axis=[]。
 
-
+review 的时候有同学建议同类中实现两次不同参数的 operator ，但是阅读 [功能接口](https://github.com/Oneflow-Inc/oneflow/wiki/Functional-Interface) 发现接口必须是正交的。
 
 ## 问题3
 
