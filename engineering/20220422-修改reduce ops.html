@@ -806,7 +806,8 @@ ninja: build stopped: subcommand failed.
 </code></pre>
 <p>选择 Int32List[1] axis=None <code>/oneflow/core/functional/impl/nn_functor.cpp</code> 会报错，显示参数不匹配，这个文件调用和初始化了 ReduceSum，即使将 axis 从开始的 {} 写成 {NULL}，仍然会出现奇怪的其他文件报错。</p>
 <p>使用 Int32List[1] axis，则无法在缺失 axis 的情况下直接计算结果。</p>
-<p>最终选择写两个接口。写两个接口同样存在瑕疵，即不可以使用 axis=None，应当使用 axis=[]</p>
+<p>最终选择写两个接口。写两个接口同样存在瑕疵，即不可以使用 axis=None，应当使用 axis=[]。</p>
+<p>review 的时候有同学建议同类中实现两次不同参数的 operator ，但是阅读 <a href="https://github.com/Oneflow-Inc/oneflow/wiki/Functional-Interface">功能接口</a> 发现接口必须是正交的。</p>
 <h2 id="3">问题3</h2>
 <p>使用匿名空间封装：</p>
 <pre><code class="language-c++">namespace {
