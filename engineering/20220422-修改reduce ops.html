@@ -588,6 +588,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    问题3
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -737,6 +744,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    问题3
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -793,6 +807,29 @@ ninja: build stopped: subcommand failed.
 <p>选择 Int32List[1] axis=None <code>/oneflow/core/functional/impl/nn_functor.cpp</code> 会报错，显示参数不匹配，这个文件调用和初始化了 ReduceSum，即使将 axis 从开始的 {} 写成 {NULL}，仍然会出现奇怪的其他文件报错。</p>
 <p>使用 Int32List[1] axis，则无法在缺失 axis 的情况下直接计算结果。</p>
 <p>最终选择写两个接口。写两个接口同样存在瑕疵，即不可以使用 axis=None，应当使用 axis=[]</p>
+<h2 id="3">问题3</h2>
+<p>使用匿名空间封装：</p>
+<pre><code class="language-c++">namespace {
+std::string exception_check(int32_t base, int32_t value, bool check_ge = true,
+                            bool check_le = true) {
+  printf(&quot;%d, %d, %d, %d\n&quot;, base, value, check_ge, check_le);
+  if (check_ge) {
+    printf(&quot;ttt: %d, %d, %d, %d\n&quot;, base, value, check_ge, check_le);
+    CHECK_GE_OR_RETURN(base, value) &lt;&lt; &quot;Dimension out of range, expected to be in range of [&quot;
+                                    &lt;&lt; -base &lt;&lt; &quot;, &quot; &lt;&lt; base - 1 &lt;&lt; &quot;], but got &quot; &lt;&lt; value;
+  }
+  if (check_le) {
+    CHECK_LE_OR_RETURN(-base, value) &lt;&lt; &quot;Dimension out of range, expected to be in range of [&quot;
+                                     &lt;&lt; -base &lt;&lt; &quot;, &quot; &lt;&lt; base - 1 &lt;&lt; &quot;], but got &quot; &lt;&lt; value;
+  }
+  return &quot;&quot;;
+}
+}  // namespace
+
+exception_check(naxis, axis[i]);
+
+</code></pre>
+<p>报错信息不显示。通过了解 <a href="https://mp.weixin.qq.com/s/GKKAzZHYWH92ckBGbQabKQ">OneFlow中的错误处理：Maybe</a> 解决问题。</p>
                 
               
               
