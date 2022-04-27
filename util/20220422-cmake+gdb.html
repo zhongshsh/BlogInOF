@@ -837,6 +837,10 @@ r             # 跑程序，跑到断点
 hexdump byte &amp;x1  # 查询变量 x1 的位置和内容
 n             # 再跑一行
 c             # 输出结果
+disassemble /mr  # 查看汇编指令
+stepi         # 走汇编级别的单步
+break *汇编地址 # 通过 disassemble /mr 查看汇编语句的地址 
+i frame 0  # 查看0号栈信息
 </code></pre>
                 
               
