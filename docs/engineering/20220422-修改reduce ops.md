@@ -59,3 +59,30 @@ signature: [
 
 
 
+## 问题3
+
+使用匿名空间封装：
+
+```c++
+namespace {
+std::string exception_check(int32_t base, int32_t value, bool check_ge = true,
+                            bool check_le = true) {
+  printf("%d, %d, %d, %d\n", base, value, check_ge, check_le);
+  if (check_ge) {
+    printf("ttt: %d, %d, %d, %d\n", base, value, check_ge, check_le);
+    CHECK_GE_OR_RETURN(base, value) << "Dimension out of range, expected to be in range of ["
+                                    << -base << ", " << base - 1 << "], but got " << value;
+  }
+  if (check_le) {
+    CHECK_LE_OR_RETURN(-base, value) << "Dimension out of range, expected to be in range of ["
+                                     << -base << ", " << base - 1 << "], but got " << value;
+  }
+  return "";
+}
+}  // namespace
+
+exception_check(naxis, axis[i]);
+
+```
+
+报错信息不显示。通过了解 [OneFlow中的错误处理：Maybe](https://mp.weixin.qq.com/s/GKKAzZHYWH92ckBGbQabKQ) 解决问题。
