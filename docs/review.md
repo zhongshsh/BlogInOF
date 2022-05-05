@@ -4,5 +4,6 @@
 | 20220420 | [Tensor.type](https://github.com/Oneflow-Inc/oneflow/pull/7948) |                       |
 | 20220421 | [tensor pin memory](https://github.com/Oneflow-Inc/oneflow/pull/8073) |                       |
 | 20220424 | [nn.utils.spectral_norm](https://github.com/Oneflow-Inc/oneflow/pull/8082) |                       |
+| 20220505 | [Add nn_functor Check](https://github.com/Oneflow-Inc/oneflow/pull/7910) |                       |
 |          |                                                              |                       |
 

@@ -12,5 +12,6 @@
 | 20220419 | [添加 byte](https://github.com/Oneflow-Inc/oneflow/pull/8053) |                              |
 | 20220420 | [统一接口文档版本为 1.10](https://github.com/Oneflow-Inc/oneflow/pull/8058) |                              |
 | 20220422 | [修改 reduce ops](https://github.com/Oneflow-Inc/oneflow/pull/8085) |                              |
+| 20220428 | [完善 array functor 报错信息](https://github.com/Oneflow-Inc/oneflow/pull/8116) |                              |
 |          |                                                              |                              |
 
