@@ -56,6 +56,7 @@ nav:
       - docString+Sphinx 生成接口文档: engineering/20220413-docstring.md
       - 修改 reduce ops: engineering/20220422-修改reduce ops.md
       - 魔术方法: engineering/20220429-magic method.md
+      - Fix upsample shape infer bug: engineering/20220507-Fix upsample shape infer bug.md
 
     - 云平台:
       - 对齐过程经验沉淀: onecloud/20220408-对齐过程经验沉淀.md
