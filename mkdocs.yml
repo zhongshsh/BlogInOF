@@ -55,7 +55,7 @@ nav:
       - 添加 nn.init.orthogonal: engineering/20220412-orthogonal_.md
       - docString+Sphinx 生成接口文档: engineering/20220413-docstring.md
       - 修改 reduce ops: engineering/20220422-修改reduce ops.md
-      - 魔术方法: engineering/20220429-magic method.md
+      - oneflow 中的魔术方法: engineering/20220429-magic method.md
       - Fix upsample shape infer bug: engineering/20220507-Fix upsample shape infer bug.md
 
     - 云平台:

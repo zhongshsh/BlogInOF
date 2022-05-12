@@ -1,10 +1,8 @@
-# 魔术方法
+# oneflow 中的魔术方法——以 \__setitem__为例
 
 魔术方法，python中所有以”__”(双下划线)作为名字开头和结尾的方法。具体介绍见  [Python 魔术方法指南 — PyCoder's Weelky CN](https://pycoders-weekly-chinese.readthedocs.io/en/latest/issue6/a-guide-to-pythons-magic-methods.html) 。
 
-## oneflow 中的魔术方法——以 \__setitem__为例
-
-### c++
+## c++
 
 ```c++
 class TensorSetItemFunctor {
@@ -104,7 +102,7 @@ ONEFLOW_FUNCTION_LIBRARY(m) {
 
 
 
-### yaml
+## yaml
 
 ```yaml
 - name: "tensor_setitem"
@@ -114,7 +112,7 @@ ONEFLOW_FUNCTION_LIBRARY(m) {
 
 
 
-### python
+## python
 
 ```python
 def _setitem(self, key, value):
