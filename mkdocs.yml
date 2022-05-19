@@ -36,9 +36,8 @@ nav:
     - 首页: index.md
 
     - 常用工具:
-      - 开发必看的guide: util/20220420-开发必看的guide.md
-      - mkdocs + GitHub 搭建文档网站: util/20220307-mkdocs.md
       - 项目收工小技巧: util/20220322-项目收工小技巧.md
+      - mkdocs + GitHub 搭建文档网站: util/20220307-mkdocs.md
       - SSH 加速下载 GitHub 项目: util/20220406-ssh.md
       - git 常用指令: util/20220312-git.md
       - 关于 PR CI: util/20220411-CI.md
