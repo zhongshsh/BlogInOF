@@ -64,6 +64,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -168,7 +173,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../util/20220420-%E5%BC%80%E5%8F%91%E5%BF%85%E7%9C%8B%E7%9A%84guide.html" class="md-tabs__link">
+      <a href="../util/20220322-%E9%A1%B9%E7%9B%AE%E6%94%B6%E5%B7%A5%E5%B0%8F%E6%8A%80%E5%B7%A7.html" class="md-tabs__link">
         常用工具
       </a>
     </li>
@@ -313,8 +318,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../util/20220420-%E5%BC%80%E5%8F%91%E5%BF%85%E7%9C%8B%E7%9A%84guide.html" class="md-nav__link">
-        开发必看的guide
+      <a href="../util/20220322-%E9%A1%B9%E7%9B%AE%E6%94%B6%E5%B7%A5%E5%B0%8F%E6%8A%80%E5%B7%A7.html" class="md-nav__link">
+        项目收工小技巧
       </a>
     </li>
   
@@ -327,18 +332,6 @@
     <li class="md-nav__item">
       <a href="../util/20220307-mkdocs.html" class="md-nav__link">
         mkdocs + GitHub 搭建文档网站
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../util/20220322-%E9%A1%B9%E7%9B%AE%E6%94%B6%E5%B7%A5%E5%B0%8F%E6%8A%80%E5%B7%A7.html" class="md-nav__link">
-        项目收工小技巧
       </a>
     </li>
   
@@ -447,10 +440,49 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          技巧总结
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93.html" class="md-nav__link md-nav__link--active">
         技巧总结
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    开发必看
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    技巧
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -685,21 +717,72 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    开发必看
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    技巧
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>技巧总结</h1>
-                
-                <ul>
+                <h1 id="_1">技巧总结</h1>
+<h2 id="_2">开发必看</h2>
+<ul>
+<li><a href="https://github.com/Oneflow-Inc/OneTeam/issues/402">使用 VS Code 开发和调试 OneFlow</a> ，可搭配 <strong>VSCode debug 工具</strong> 一起食用</li>
+<li><a href="https://github.com/Oneflow-Inc/OneTeam/blob/master/tutorial/howto_write_api_docs.md">howto_write_api_doc</a> ，强调 make html 前 pip requirements</li>
+<li><a href="https://github.com/Oneflow-Inc/oneflow/wiki/Functional-Interface">功能接口</a> </li>
+<li><a href="https://zhuanlan.zhihu.com/p/458111952">深度学习框架如何优雅的做算子对齐任务</a> </li>
+<li><a href="https://github.com/Oneflow-Inc/OneTeam/blob/0a3f8b2d4beb75ed902cc6ce210e9af4e19882da/docs/如何在OneFlow中新增User Op.md">如何在OneFlow中新增User Op</a> </li>
+<li><a href="https://mp.weixin.qq.com/s/GKKAzZHYWH92ckBGbQabKQ">错误处理：Maybe</a></li>
+<li><a href="https://github.com/Oneflow-Inc/OneTeam/issues/654">OneFlow 环境变量</a> </li>
+<li></li>
+</ul>
+<h2 id="_3">技巧</h2>
+<ul>
 <li>查看文档，如查看 nn.functional.conv2d 的文档，可以通过 nn.functional.conv2d.__doc__</li>
 <li>测试样例不宜过大，因为ci会多进程跑测试，每个样例的内存不能太大，不然可能就oom了 </li>
 <li>yaml 中 list 的初始化需要根据 维度 而定，如 Int32List[3] dilation=1 对于 3d， Int32List[2] dilation=1 对于 2d</li>
 <li>如果在文档字符串中使用任何反斜杠转义，那么需要用<code>r"""your raw docstring"""</code></li>
-<li>doc 规定文档字符串的代码要有个变量接收结果 outputs = F.conv1d(inputs, filters) ，不能直接 F.conv1d(inputs, filters) 。可以运行 <code>./python/oneflow/test/modules/test_functional_docstr.py</code> 来检查文档是否有问题</li>
+<li>doc 规定文档字符串的代码要有个变量接收结果 outputs = F.conv1d(inputs, filters) 或者直接 F.conv1d(inputs, filters) 并附带上运行结果。可以运行 <code>./python/oneflow/test/modules/test_functional_docstr.py</code> 来检查文档是否有问题</li>
 <li>通过 import oneflow as flow; flow; 查看包位置</li>
+<li></li>
 </ul>
                 
               
