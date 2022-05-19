@@ -787,7 +787,7 @@
 </ul>
 <p><img alt="1649669703474" src="https://user-images.githubusercontent.com/62104945/162732565-13e8dc71-bcdd-4d7c-a9b8-4d818e589c55.png" /></p>
 <ul>
-<li>根据 bot 的提示添加 label。一般要选一下 automerge，表明 bot 在测试通过时会自动合并 pr 到 master。注意这里提示信息中的 label 选一个就行了，而不是全选，这里有个傻子第一次添加 label 全选了 :sweat:</li>
+<li>根据 bot 的提示添加 label。注意要选一下 automerge，表明 bot 在测试通过时会自动合并 pr 到 master。注意这里提示信息中的 label 选一个就行了，而不是全选，这里有个傻子第一次添加 label 全选了 :sweat:</li>
 </ul>
 <p><img alt="1649669272258" src="https://user-images.githubusercontent.com/62104945/162732537-c6e310b9-2efe-40e2-9cdc-9afb1487a8ec.png" /></p>
 <ul>
@@ -795,23 +795,24 @@
 </ul>
 <h2 id="_2">注意事项</h2>
 <ul>
-<li>如果是 bot 来 format 代码，那么需要重新添加 bot 之后才会继续跑 CI 流程</li>
+<li>如果是 bot 来 format 代码，那么出现如下提示之后需要重新添加 bot 之后才会继续跑 CI 流程</li>
 </ul>
 <p><img alt="1649670072655" src="https://user-images.githubusercontent.com/62104945/162732477-29ab079e-58c6-4663-b093-928fd6b22cb8.png" /></p>
 <ul>
-<li>waiting queue，等待其执行结束即可</li>
+<li>当 CI 显示 queued 时，等待其执行结束即可，但是如果好几个小时还没有调度到 ci，则应该重新添加 bot</li>
 </ul>
 <p><img alt="image" src="https://user-images.githubusercontent.com/62104945/162755373-dd603f6b-63e6-490f-9f1f-3d1cd8575ae7.png" /></p>
 <ul>
-<li>如果 Bot 被取消了并且 ci 错误和自己的 pr 无关，需要重新点 bot 请求 ci，以及如果 pr 很久都没有被调度到可以尝试取消 bot，然后刷新网页重新点一下 bot ，或者点进被取消的 checks details 中重新跑</li>
+<li>如果 CI 显示 cancelled，查看 cancel 原因，常见是有长时间等待不到 GPU 资源而自动取消，此时需要重新添加 bot 或者 rerun</li>
 </ul>
 <p><img alt="image" src="https://user-images.githubusercontent.com/62104945/162859989-7b44adbf-e5f2-4695-98c1-01473094fa32.png" /></p>
 <ul>
-<li>有时候会卡在某些不是自己 pr 导致的错误，可以根据错误提示注释该部分代码。例如如下错误并不是自己 pr 导致的，可以尝试在服务器复现，复现不了的话可以先注释 test_crossformer_compatibility</li>
+<li>如果 CI 错误并且报错信息与自己的 pr 无关，尝试重新添加 bot。如果重新添加 bot 仍然出现同样错误，可以根据错误提示注释该部分代码。例如如下错误并不是自己 pr 导致的，可以尝试在服务器复现，复现不了的话可以先注释 test_crossformer_compatibility</li>
 </ul>
 <p><img alt="image" src="https://user-images.githubusercontent.com/62104945/164135953-59aae1d7-2123-45a6-980e-c3ffe7515af0.png" /></p>
 <ul>
-<li>最近提交 CI 总是卡住，晓雨的经验是 别人合了 pr 之后你要第一个点 update，即收到 master 有 pr 合并了的邮件或者从 github 的 channel 看到有 pr 合并， 重新在自己 pr 添加 bot </li>
+<li>最近提交 CI 总是 canceled 请求不到资源，晓雨的经验是 别人合了 pr 之后你要第一个点 update，即收到 master 有 pr 合并了的邮件或者从 github 的 channel 看到有 pr 合并， 重新在自己 pr 添加 bot </li>
+<li>如果 pr 中有添加或者修改 docString，可以在合并 pr 前运行 <code>./python/oneflow/test/modules/test_functional_docstr.py</code> 来检查文档是否有问题</li>
 </ul>
                 
               
