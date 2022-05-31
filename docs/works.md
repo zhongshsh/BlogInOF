@@ -14,5 +14,8 @@
 | 20220422 | [修改 reduce ops](https://github.com/Oneflow-Inc/oneflow/pull/8085) |                              |
 | 20220428 | [完善 array functor 报错信息](https://github.com/Oneflow-Inc/oneflow/pull/8116) |                              |
 | 20220506 | [Fix upsample shape infer bug continue](https://github.com/Oneflow-Inc/oneflow/pull/8159) |                              |
+| 20220516 | [Fix instanceNorm](https://github.com/Oneflow-Inc/oneflow/pull/8246) |                              |
+| 20220523 | [Fix fill_](https://github.com/Oneflow-Inc/oneflow/pull/8283) |                              |
+| 20220531 | begin oneflow->onnx                                          |                              |
 |          |                                                              |                              |
 
