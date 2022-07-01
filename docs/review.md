@@ -12,5 +12,16 @@
 | 20220520 | [Add function_library.h Exception](https://github.com/Oneflow-Inc/oneflow/pull/8241) |                       |
 | 20220520 | [Dev linalg inv](https://github.com/Oneflow-Inc/oneflow/pull/8183) |                       |
 | 20220531 | [Add repeat interleave op](https://github.com/Oneflow-Inc/oneflow/pull/8324) |                       |
+| 20220620 | [add oneflow.mm op](https://github.com/Oneflow-Inc/oneflow/pull/8440) |                       |
+| 20220628 | [ErrorMsgRefine](https://github.com/Oneflow-Inc/oneflow/pull/8406) |                       |
+| 20220628 | [Modify add_n_op.cpp and add test_add_n_op.py](https://github.com/Oneflow-Inc/oneflow/pull/8491) |                       |
+| 20220629 | [add tensor dot api and delete useless api in tensor.py](https://github.com/Oneflow-Inc/oneflow/pull/8520) |                       |
+| 20220629 | [Modify /user/ops/arg_sort_op.cpp , supplement the error information](https://github.com/Oneflow-Inc/oneflow/pull/8513) |                       |
+| 20220629 | [Refine error msg: core/autograd/gradient_funcs](https://github.com/Oneflow-Inc/oneflow/pull/8496) |                       |
+| 20220629 | [arange api support input scalar type](https://github.com/Oneflow-Inc/oneflow/pull/8522) |                       |
+| 20220630 | [Modify bias_add_op.cpp,delete unnecessary checks and improve the error message](https://github.com/Oneflow-Inc/oneflow/pull/8524) |                       |
+| 20220630 | [Modify batch_gather_op.cpp and improve the error message](https://github.com/Oneflow-Inc/oneflow/pull/8533) |                       |
+| 20220701 | [refine error msg: add NOLINT for defensive code in autograd](https://github.com/Oneflow-Inc/oneflow/pull/8525) |                       |
+| 20220701 | [refine error msg for some autograd code](https://github.com/Oneflow-Inc/oneflow/pull/8541) |                       |
 |          |                                                              |                       |
 

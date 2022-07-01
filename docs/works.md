@@ -15,7 +15,10 @@
 | 20220428 | [完善 array functor 报错信息](https://github.com/Oneflow-Inc/oneflow/pull/8116) |                              |
 | 20220506 | [Fix upsample shape infer bug continue](https://github.com/Oneflow-Inc/oneflow/pull/8159) |                              |
 | 20220516 | [Fix instanceNorm](https://github.com/Oneflow-Inc/oneflow/pull/8246) |                              |
-| 20220523 | [Fix fill_](https://github.com/Oneflow-Inc/oneflow/pull/8283) |                              |
+| 20220523 | [Fix fill_](https://github.com/Oneflow-Inc/oneflow/pull/8283) | TODO                         |
 | 20220531 | begin oneflow->onnx                                          |                              |
+| 20220620 | [Add mv op](https://github.com/Oneflow-Inc/oneflow/pull/8445) | TODO                         |
+| 20220628 | [Fix randn](https://github.com/Oneflow-Inc/oneflow/pull/8506/) |                              |
+| 20220630 | [Add flow norm](https://github.com/Oneflow-Inc/oneflow/pull/8535) |                              |
 |          |                                                              |                              |
 
