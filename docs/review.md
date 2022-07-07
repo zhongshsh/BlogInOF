@@ -23,5 +23,12 @@
 | 20220630 | [Modify batch_gather_op.cpp and improve the error message](https://github.com/Oneflow-Inc/oneflow/pull/8533) |                       |
 | 20220701 | [refine error msg: add NOLINT for defensive code in autograd](https://github.com/Oneflow-Inc/oneflow/pull/8525) |                       |
 | 20220701 | [refine error msg for some autograd code](https://github.com/Oneflow-Inc/oneflow/pull/8541) |                       |
+| 20220704 | [Modify some file and add test](https://github.com/Oneflow-Inc/oneflow/pull/8556) |                       |
+| 20220704 | [fix diag 0size tensr shape infer bug](https://github.com/Oneflow-Inc/oneflow/pull/8557) |                       |
+| 20220705 | [modify some file and improve the error message](https://github.com/Oneflow-Inc/oneflow/pull/8566) |                       |
+| 20220706 | [Fix set_acc_grad and backward wrong value](https://github.com/Oneflow-Inc/oneflow/pull/8575) |                       |
+| 20220706 | [Fill GetSbp bug and consistent test bug](https://github.com/Oneflow-Inc/oneflow/pull/8576) |                       |
+| 20220706 | [add module releated container docs](https://github.com/Oneflow-Inc/oneflow/pull/8580) |                       |
+| 20220707 | [modify some file and improve error message](https://github.com/Oneflow-Inc/oneflow/pull/8592) |                       |
 |          |                                                              |                       |
 
