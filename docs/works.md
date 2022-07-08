@@ -22,5 +22,6 @@
 | 20220630 | [Add flow norm](https://github.com/Oneflow-Inc/oneflow/pull/8535) |                                                              |
 | 20220704 | [Fix doc and ops template auto gen](https://github.com/Oneflow-Inc/oneflow/pull/8546) | TODO(docs == init ?)                                         |
 | 20220706 | [Add addcdiv](https://github.com/Oneflow-Inc/oneflow/pull/8581) |                                                              |
+| 20220708 | [Add logspace](https://github.com/Oneflow-Inc/oneflow/pull/8599) |                                                              |
 |          |                                                              |                                                              |
 

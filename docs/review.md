@@ -30,5 +30,7 @@
 | 20220706 | [Fill GetSbp bug and consistent test bug](https://github.com/Oneflow-Inc/oneflow/pull/8576) |                       |
 | 20220706 | [add module releated container docs](https://github.com/Oneflow-Inc/oneflow/pull/8580) |                       |
 | 20220707 | [modify some file and improve error message](https://github.com/Oneflow-Inc/oneflow/pull/8592) |                       |
+| 20220707 | [refine error msg for some user ops](https://github.com/Oneflow-Inc/oneflow/pull/8579) |                       |
+| 20220708 | [Add full_like api](https://github.com/Oneflow-Inc/oneflow/pull/8595) |                       |
 |          |                                                              |                       |
 
