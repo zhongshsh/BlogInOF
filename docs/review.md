@@ -32,5 +32,7 @@
 | 20220707 | [modify some file and improve error message](https://github.com/Oneflow-Inc/oneflow/pull/8592) |                       |
 | 20220707 | [refine error msg for some user ops](https://github.com/Oneflow-Inc/oneflow/pull/8579) |                       |
 | 20220708 | [Add full_like api](https://github.com/Oneflow-Inc/oneflow/pull/8595) |                       |
+| 20220708 | [Add randint like](https://github.com/Oneflow-Inc/oneflow/pull/8598) |                       |
+| 20220712 | [Fix zeros like and ones_like api](https://github.com/Oneflow-Inc/oneflow/pull/8632) |                       |
 |          |                                                              |                       |
 

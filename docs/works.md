@@ -23,5 +23,8 @@
 | 20220704 | [Fix doc and ops template auto gen](https://github.com/Oneflow-Inc/oneflow/pull/8546) | TODO(docs == init ?)                                         |
 | 20220706 | [Add addcdiv](https://github.com/Oneflow-Inc/oneflow/pull/8581) |                                                              |
 | 20220708 | [Add logspace](https://github.com/Oneflow-Inc/oneflow/pull/8599) |                                                              |
+| 20220711 | [Add hann_window](https://github.com/Oneflow-Inc/oneflow/pull/8615) |                                                              |
+| 20220712 | [Fix norm](https://github.com/Oneflow-Inc/oneflow/pull/8629) | TODO(linalg.norm)                                            |
+| 20220714 | [Fix nn doc](https://github.com/Oneflow-Inc/oneflow/pull/8650) |                                                              |
 |          |                                                              |                                                              |
 
