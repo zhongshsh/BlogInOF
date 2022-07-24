@@ -26,5 +26,10 @@
 | 20220711 | [Add hann_window](https://github.com/Oneflow-Inc/oneflow/pull/8615) |                                                              |
 | 20220712 | [Fix norm](https://github.com/Oneflow-Inc/oneflow/pull/8629) | TODO(linalg.norm)                                            |
 | 20220714 | [Fix nn doc](https://github.com/Oneflow-Inc/oneflow/pull/8650) |                                                              |
+| 20220715 | [Add nn functional fold](https://github.com/Oneflow-Inc/oneflow/pull/8667) |                                                              |
+| 20220719 | [Fix tensor type doc](https://github.com/Oneflow-Inc/oneflow/pull/8699) |                                                              |
+| 20220719 | [rm doc of tensor.gelu](https://github.com/Oneflow-Inc/oneflow/pull/8696) |                                                              |
+| 20220720 | [Add functional binary cross entropy](https://github.com/Oneflow-Inc/oneflow/pull/8708) |                                                              |
+| 20220722 | [Dev support replication pad1d](https://github.com/Oneflow-Inc/oneflow/pull/8728) |                                                              |
 |          |                                                              |                                                              |
 

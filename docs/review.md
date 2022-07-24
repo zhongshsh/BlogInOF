@@ -34,5 +34,8 @@
 | 20220708 | [Add full_like api](https://github.com/Oneflow-Inc/oneflow/pull/8595) |                       |
 | 20220708 | [Add randint like](https://github.com/Oneflow-Inc/oneflow/pull/8598) |                       |
 | 20220712 | [Fix zeros like and ones_like api](https://github.com/Oneflow-Inc/oneflow/pull/8632) |                       |
+| 20220719 | [fix gelu nn.Module bug and support tanh mode.](https://github.com/Oneflow-Inc/oneflow/pull/8693) |                       |
+| 20220719 | [Fix bug of Tensor.type](https://github.com/Oneflow-Inc/oneflow/pull/8697) |                       |
+| 20220722 | [impl of reflection_pad1d and replication_pad1d](https://github.com/Oneflow-Inc/oneflow/pull/8724) |                       |
 |          |                                                              |                       |
 
