@@ -37,5 +37,7 @@
 | 20220719 | [fix gelu nn.Module bug and support tanh mode.](https://github.com/Oneflow-Inc/oneflow/pull/8693) |                       |
 | 20220719 | [Fix bug of Tensor.type](https://github.com/Oneflow-Inc/oneflow/pull/8697) |                       |
 | 20220722 | [impl of reflection_pad1d and replication_pad1d](https://github.com/Oneflow-Inc/oneflow/pull/8724) |                       |
+| 20220725 | [Add RMSLayerNorm Module](https://github.com/Oneflow-Inc/oneflow/pull/8725) |                       |
+| 20220726 | [fix randn default device](https://github.com/Oneflow-Inc/oneflow/pull/8749) |                       |
 |          |                                                              |                       |
 

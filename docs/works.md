@@ -31,5 +31,7 @@
 | 20220719 | [rm doc of tensor.gelu](https://github.com/Oneflow-Inc/oneflow/pull/8696) |                                                              |
 | 20220720 | [Add functional binary cross entropy](https://github.com/Oneflow-Inc/oneflow/pull/8708) |                                                              |
 | 20220722 | [Dev support replication pad1d](https://github.com/Oneflow-Inc/oneflow/pull/8728) |                                                              |
+| 20220725 | [Fix masked_fill graph grad](https://github.com/Oneflow-Inc/oneflow/pull/8742) |                                                              |
+| 20220727 | [Dev wkv](https://github.com/Oneflow-Inc/oneflow/pull/8753)  |                                                              |
 |          |                                                              |                                                              |
 
